@@ -2,7 +2,7 @@ CSS Exercises
 =============
 
 
-1. Add a CSS rule and appropriate html to style every other line of the unordered list with a light blue background color.  Specify the background color using the rgb method.
+1. Agregue una regla CSS y html apropiado para aplicar estilo a cualquier otra línea de la lista desordenada con un color de fondo azul claro. Especifique el color de fondo utilizando el método rgb.
 
 .. actex:: ex_css_1
    :language: html
@@ -21,7 +21,7 @@ CSS Exercises
       </body>
    </html>
 
-2. Given the table in the html code in the question style the table so that the odd rows have a light gray background  In addition and a header row to the table and style that row so it has white text and a black background color.  Change the font so that they are all 14 point sans serif of some kind.
+2. Dada la tabla en el código html en el estilo de pregunta, la tabla para que las filas impares tengan un fondo gris claro Además, una fila de encabezado para la tabla y el estilo de esa fila para que tenga texto blanco y un color de fondo negro. Cambie la fuente para que todos sean sans serif de 14 puntos de algún tipo.
 
 .. actex:: ex_css_2
    :language: html
@@ -38,36 +38,36 @@ CSS Exercises
       </body>
    </html>
 
-3. Suppose you are working on a recipe website.  Recipes have a title, a list of ingredients, and an instructions section.  Make a webpage that shows the recipe for grilled cheese sandwiches with bacon and tomato.   The ingredients should be displayed as an unordered list, with no bullets.  meat ingredients should have a light red background color, vegetables should have a light green background, and dairy products should have a light yellow.  The title should be in a sans serif font of your choice, and the instructions should have a heading "Instructions" and the font for the instructions should be italic.
+3. Supongamos que está trabajando en un sitio web de recetas. Las recetas tienen un título, una lista de ingredientes y una sección de instrucciones. Haga una página web que muestre la receta de sándwiches de queso a la parrilla con tocino y tomate. Los ingredientes deben mostrarse como una lista desordenada, sin viñetas. los ingredientes de carne deben tener un color de fondo rojo claro, las verduras deben tener un fondo verde claro y los productos lácteos deben tener un color amarillo claro. El título debe estar en una fuente sans serif de su elección, y las instrucciones deben tener un encabezado "Instructions" y la fuente para las instrucciones debe estar en cursiva.
 
 .. actex:: ex_css_3
    :language: html
    :nocodelens:
 
 
-4. Using CSS and HTML Make a webpage that has two columns.  Each column should use half of the width of the page.  The left half should have a light gray background and the right half should have a light green background.  The left half should have a list of the 5 best selling  books in Amazon's kindle store, and the right should have a list of your five favorite celebrities or athletes.
+4. Uso de CSS y HTML Cree una página web que tenga dos columnas. Cada columna debe usar la mitad del ancho de la página. La mitad izquierda debe tener un fondo gris claro y la mitad derecha debe tener un fondo verde claro. La mitad izquierda debe tener una lista de los 5 libros más vendidos en la tienda Kindle de Amazon, y la derecha debe tener una lista de tus cinco celebridades o atletas favoritos.
 
 .. actex:: ex_css_4
    :language: html
    :nocodelens:
 
-5. Using the nav element, make a navbar for at the top of a sample webpage.  Add at least three links to the navbar using an unordered list that is displayed as inline rather than block.  Make the navbar have a light blue background color, but change the background of the title to a darker blue when the mouse hovers over it.  (see the `:hover selector <http://www.w3schools.com/cssref/sel_hover.asp>`_)
+5. Usando el elemento de navegación, cree una barra de navegación en la parte superior de una página web de muestra. Agregue al menos tres enlaces a la barra de navegación utilizando una lista desordenada que se muestra como en línea en lugar de bloqueada. Haga que la barra de navegación tenga un color de fondo azul claro, pero cambie el fondo del título a un azul más oscuro cuando el mouse se mueva sobre él. (consulte el `:selector de desplazamiento <http://www.w3schools.com/cssref/sel_hover.asp>`_)
 
 .. actex:: ex_css_5
    :language: html
    :nocodelens:
 
 
-6. Using the image of the playing card, use transformations and animations to make the playing card spin around endlessly.
+6. Usando la imagen de la tarjeta de juego, use transformaciones y animaciones para hacer que la tarjeta gire sin parar.
 
 .. actex:: ex_css_6
    :language: html
    :nocodelens:
 
-7.  Using the template developed in the layout chapter, develop a homepage for yourself, published on github pages, that employs a two column layout with a fixed navbar (always on screen), and a footer.  The navbar should link to at least two additional pages used to describe your hobbies or favorite teams.  The CSS for this website should be contained in its own CSS file, and all three pages should use this CSS file.
+7. Usando la plantilla desarrollada en el capítulo de diseño, desarrolle una página de inicio para usted, publicada en páginas de github, que emplee un diseño de dos columnas con una barra de navegación fija (siempre en pantalla) y un pie de página. La barra de navegación debe vincular al menos a dos páginas adicionales utilizadas para describir sus pasatiempos o equipos favoritos. El CSS para este sitio web debe estar contenido en su propio archivo CSS, y las tres páginas deben usar este archivo CSS.
 
 
-8. Modify the final version of the menu project so that the menu is a horizontal menu with the first level of submenus dropping down below the selected item.
+8. Modifique la versión final del proyecto de menú para que el menú sea horizontal con el primer nivel de submenús desplegable debajo del elemento seleccionado.
 
 
    

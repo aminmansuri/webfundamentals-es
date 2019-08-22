@@ -1,5 +1,5 @@
-Quiz Two
---------
+Prueba dos
+------------
 
 
 
@@ -13,12 +13,12 @@ Quiz Two
       :answer_c: &lt;img&gt;
       :answer_d: &lt;li&gt;
       :correct: a,b,d
-      :feedback_a: Yes
-      :feedback_b: Yes
-      :feedback_c: No, an img tag is an inline element
-      :feedback_d: Yes
+      :feedback_a: Sí
+      :feedback_b: Sí
+      :feedback_c: No, una etiqueta img es un elemento en línea
+      :feedback_d: Sí
 
-      Which of the following are HTML block elements.  Select all that apply.
+      ¿Cuáles de los siguientes son elementos de bloque HTML? Seleccione todas las que correspondan.
 
    .. mchoice:: q1_2
       :answer_a: File Transfer Protocol
@@ -26,15 +26,15 @@ Quiz Two
       :answer_c: Secure Sockets Layer
       :answer_d: HyperText Transfer Protocol
       :correct: d
-      :feedback_a: No, FTP is not related to this class.
-      :feedback_b: No, HTML is the markup language not the protocol
-      :feedback_c: No, SSL is not used
-      :feedback_d: Yes
+      :feedback_a: No, FTP no está relacionado con esta clase.
+      :feedback_b: No, HTML es el lenguaje de marcado, no el protocolo
+      :feedback_c: No, no se usa SSL
+      :feedback_d: Sí
 
-      What is the protocol used in the URL:  ``http://interactivepython.org/index.html``
+      ¿Cuál es el protocolo utilizado en la URL? ``http://interactivepython.org/index.html``
 
 
-   In the following question, select all of the correct answers for each question.
+   En la siguiente pregunta, seleccione todas las respuestas correctas para cada pregunta.
 
    .. mchoice:: q1_3
       :multiple_answers:
@@ -44,13 +44,13 @@ Quiz Two
       :answer_d: &lt;li class="high"&gt;do my homework&lt;/li&gt;
       :answer_e: &lt;p id="high"&gt;some text&lt;/p&gt;
       :correct: b,d
-      :feedback_a: This h1 has low class
-      :feedback_b: Yes
-      :feedback_c: No, the paragraph tag is just a plain paragraph with no class
+      :feedback_a: Este h1 tiene clase baja
+      :feedback_b: Sí
+      :feedback_c: No, la etiqueta de párrafo es solo un párrafo simple sin clase
       :feedback_d: Yes
-      :feedback_e: No the selector is matching the class not the id.
+      :feedback_e: No, el selector coincide con la clase, no con el id.
 
-      Which of the following will match the CSS selector ``.high``
+      ¿Cuál de las siguientes opciones coincidirá con el selector CSS ``.high``
 
    .. mchoice:: q1_4
       :multiple_answers:
@@ -60,13 +60,13 @@ Quiz Two
       :answer_d: &lt;li class="high"&gt;do my homework&lt;/li&gt;
       :answer_e: &lt;p id="high"&gt;some text&lt;/p&gt;
       :correct: b
-      :feedback_a: This h1 has low class
+      :feedback_a: Este h1 tiene clase baja
       :feedback_b: Yes
-      :feedback_c: No, the paragraph tag is just a plain paragraph with no class
-      :feedback_d: No, this is an li tag
-      :feedback_e: No, this selector is looking for a paragraph with a class of high
+      :feedback_c: No, la etiqueta de párrafo es solo un párrafo simple sin clase
+      :feedback_d: No, esta es una etiqueta li
+      :feedback_e: No, este selector está buscando un párrafo con una clase de alta
 
-      Which of the following will match the CSS selector ``p.high``
+      ¿Cuál de los siguientes coincidirá con el selector CSS? ``p.high``
 
 
    .. mchoice:: q1_5
@@ -77,13 +77,13 @@ Quiz Two
       :answer_d: &lt;li class="high"&gt;do my homework&lt;/li&gt;
       :answer_e: &lt;p id="high"&gt;some text&lt;/p&gt;
       :correct: b,c,e
-      :feedback_a: No this is an h1 tag
-      :feedback_b: Yes
-      :feedback_c: Yes
-      :feedback_d: No, this is an li tag
-      :feedback_e: Yes
+      :feedback_a: No, esta es una etiqueta h1
+      :feedback_b: Sí
+      :feedback_c: Sí
+      :feedback_d: No, esta es una etiqueta li
+      :feedback_e: Sí
 
-      Which of the following will match the CSS selector ``p``
+      ¿Cuál de los siguientes coincidirá con el selector CSS? ``p``
 
    .. mchoice:: q1_6
       :multiple_answers:
@@ -99,7 +99,7 @@ Quiz Two
       :feedback_d: No, this selector is matching on the id not the class
       :feedback_e: Yes
 
-      Which of the following will match the CSS selector ``#high``
+      ¿Cuál de los siguientes coincidirá con el selector CSS? ``#high``
 
 
    .. mchoice:: q1_7
@@ -110,24 +110,24 @@ Quiz Two
       :answer_d: margin
       :answer_e: background-color
       :correct: b,c,d
-      :feedback_a: No height is an attribute of the content
-      :feedback_b: Yes
-      :feedback_c: Yes
-      :feedback_d: Yes
-      :feedback_e: No, background-color is not part of the box model
+      :feedback_a: No, height es un atributo del contenido
+      :feedback_b: Sí
+      :feedback_c: Sí
+      :feedback_d: Sí
+      :feedback_e: No, background-color no es parte del modelo de caja
 
-      Which of the following are properties of the CSS Box Model
+      ¿Cuáles de las siguientes son propiedades del modelo de caja CSS?
 
 
-When you have finished the above question, click on the Show button below to reveal two additional exercises.
+Cuando haya terminado la pregunta anterior, haga clic en el botón Mostrar a continuación para mostrar dos ejercicios adicionales.
 
-For the following questions, I will use your final result.  You can press the Run button as many
-times as you like without penalty.  You should also Save your final version.
+Para las siguientes preguntas, utilizaré su resultado final. Puede presionar el botón Ejecutar tantos
+veces como quieras sin penalización. También debe guardar su versión final.
 
 .. reveal:: css_qs
    :showtitle: Show Final Questions
 
-   Fill in the additional HTML needed to make an ordered list of 3 items.  The items should be numbered A, B, and C.
+   Complete el HTML adicional necesario para hacer una lista ordenada de 3 elementos. Los artículos deben estar numerados A, B y C.
 
    .. actex:: q1_8
       :language: html
@@ -136,7 +136,7 @@ times as you like without penalty.  You should also Save your final version.
 
       </html>
 
-   Given the HTML in the activecode below, add the appropriate CSS to style the h1 with a 28pt font, and rgb color consisting of red: 128, blue: 200, green: 99 and the *last* paragraph with a color of orange.
+   Dado el HTML en el código activo a continuación, agregue el CSS apropiado para diseñar el h1 con una fuente de 28pt y un color rgb que consiste en rojo: 128, azul: 200, verde: 99 y el *último* párrafo con un color naranja.
 
    .. actex:: q1_9
       :language: html

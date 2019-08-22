@@ -1,25 +1,25 @@
-Changing your page layout
-=========================
+Cambiar la Disposición de tu Página
+=====================================
 
-Before we go any further it is important to stop and think a bit about how the browser renders the html into the browser window.  As the browser reads each html tag, it must figure out where on the page it belongs.  For the most part, the browser flows each tag from top to bottom and from left to right.  As we have mentioned block elements start on a new line, and inline elements flow from left to right, fitting within the horizontal size of the page or else going on to the next line.  In this section we will consider several different CSS options that have an impact on the layout of a page.
+Antes de continuar, es importante detenerse y pensar un poco sobre cómo el navegador representa el html en la ventana del navegador. A medida que el navegador lee cada etiqueta html, debe averiguar en qué parte de la página pertenece. En su mayor parte, el navegador fluye cada etiqueta de arriba a abajo y de izquierda a derecha. Como hemos mencionado, los elementos de bloque comienzan en una nueva línea, y los elementos en línea fluyen de izquierda a derecha, ajustándose al tamaño horizontal de la página o pasando a la siguiente línea. En esta sección consideraremos varias opciones CSS diferentes que tienen un impacto en el diseño de una página.
 
-The CSS Box Model
------------------
+El Modelo de Caja de CSS
+--------------------------
 
-All HTML elements can be thought of simply as boxes.  In fact that is exactly how the browser thinks of them as it begins the process of rendering the page.  When doing web page design and layout it is very common to hear designers talk about the CSS box model.  Figure 1 illustrates the different components that go into the box model.
+Todos los elementos HTML pueden considerarse simplemente como cuadros. De hecho, así es exactamente como el navegador piensa en ellos cuando comienza el proceso de renderizar la página. Al hacer el diseño y el diseño de la página web, es muy común escuchar a los diseñadores hablar sobre el modelo de caja CSS. La Figura 1 ilustra los diferentes componentes que entran en el modelo de caja.
 
 .. figure:: Figures/box-model.gif
 
-   Figure used in accordance with w3schools fair use policy
+   Figura utilizada de acuerdo con la política de uso justo de w3schools
 
-The different parts of the box model are defined as follows:
+Las diferentes partes del modelo de caja se definen de la siguiente manera:
 
-* Content:  The actual text or image content of an html tag
-* Padding:  The space between the content and the border.
-* Border:  This can be an actual drawn border or it can be invisible
-* Margin: The space outside the border between this box and the boxes next to it in each direction.
+* Contenido: el contenido de texto o imagen real de una etiqueta html
+* Relleno: el espacio entre el contenido y el borde.
+* Borde: puede ser un borde real o invisible
+* Margen: el espacio fuera del borde entre este cuadro y los cuadros al lado en cada dirección.
 
-Lets try a simple example:
+Probemos un ejemplo simple:
 
 .. activecode:: css_boxmodel
    :language: html
@@ -44,23 +44,23 @@ Lets try a simple example:
    </body>
    </html>
 
-As a bit of review, add a rule to the example above to make the margin for the second Hello world to be 5px.  What does this tell you about how margins work?
+Como un poco de revisión, agregue una regla al ejemplo anterior para que el margen para el segundo Hello world sea de 5px. ¿Qué te dice esto sobre cómo funcionan los márgenes?
 
-The size of content area itself can also be controlled using the following properties:
+El tamaño del área de contenido en sí también se puede controlar mediante las siguientes propiedades:
 
-* height
-* max-height
-* min-height
-* width
-* max-width
-* min-width
+* altura
+* Altura máxima
+* altura mínima
+* ancho
+* anchura máxima
+* ancho mínimo
 
-Each of these properties can be specified in terms of pixels (px), points (pt), or as a percentage.  In addition the auto keyword can be used, which is the default and allows the browser to figure out the proper height and width.
+Cada una de estas propiedades se puede especificar en términos de píxeles (px), puntos (pt) o como un porcentaje. Además, se puede usar la palabra clave auto, que es la predeterminada y permite al navegador determinar la altura y el ancho adecuados.
 
 
-When you use height and width with a **container** element, such as one of the semantic elements, it is very useful to know about the overflow property.  What if you set your height so small that the content does not fit?  The `overflow <http://www.w3schools.com/cssref/pr_pos_overflow.asp>`_ property tells you how to handle that.
+Cuando usa la altura y el ancho con un elemento **contenedor**, como uno de los elementos semánticos, es muy útil saber acerca de la propiedad de desbordamiento. ¿Qué sucede si establece una altura tan pequeña que el contenido no cabe? La propiedad `overflow <http://www.w3schools.com/cssref/pr_pos_overflow.asp>`_ le indica cómo manejar eso.
 
-Here is an example activecode for you to experiment with:
+Aquí hay un ejemplo de activecode para que experimentes:
 
 .. activecode:: css_overflow
    :language: html
@@ -93,24 +93,24 @@ Here is an example activecode for you to experiment with:
    </body>
    </html>
 
-The possible values for the overflow property are:
+Los valores posibles para la propiedad de desbordamiento son:
 
 * visible
-* hidden
-* scroll
+* oculto
+* desplazamiento
 * auto
 
-Give them a try in the example above and see what happens.
+Pruébelos en el ejemplo anterior y vea qué sucede.
 
 .. admonition:: Greeking
 
-   You may be wondering about the use of latin words in the example paragraph.  This is an old tradition in typesetting, to use a bunch of latin words, many of the sentences start with "Lorum Ipsum," so sometimes it is called Lorum Ipusum as well.  The idea is to fill the space with words that obviously have no relationship to the actual webpage.  This helps reviewers focus on the style rather than the content.  Why do they call it greeking when the words are latin?  Its Greek to me.  Obviously they skipped Paideia that day.
+   Quizás se esté preguntando sobre el uso de palabras latinas en el párrafo de ejemplo. Esta es una vieja tradición en la composición tipográfica, para usar un montón de palabras latinas, muchas de las oraciones comienzan con "Lorum Ipsum", por lo que a veces también se llama Lorum Ipusum. La idea es llenar el espacio con palabras que obviamente no tienen relación con la página web real. Esto ayuda a los revisores a centrarse en el estilo en lugar del contenido.
 
 
 Display
 -------
 
-With CSS you can take control of how each element is layed out on the page.  You can hide elements, you can make block elements inline, and inline elements block.  There are two ways to control the visibility of an element.  You can completely hide it, as if it is not there and takes up no space on the page, or you can have the leave the space on the page, but it will not have anything in it.
+Con CSS puede tomar el control de cómo se presenta cada elemento en la página. Puede ocultar elementos, puede hacer que los elementos de bloque estén en línea y que los elementos en línea se bloqueen. Hay dos formas de controlar la visibilidad de un elemento. Puede ocultarlo por completo, como si no estuviera allí y no ocupara espacio en la página, o puede dejar el espacio en la página, pero no tendrá nada en él.
 
 .. activecode:: css_disp1
    :language: html
@@ -134,9 +134,9 @@ With CSS you can take control of how each element is layed out on the page.  You
    </body>
    </html>
 
-Now change the rule and instead of ``display: none`` change it to ``visibility: hidden``  Notice that visibility hidden reserves space on the page for the element but does not show it.  Whereas the ``display: none`` rule removed any trace of the element.  Now change the rule to ``visibility: show`` to display all of the elements.
+Ahora cambie la regla y, en lugar de ``display:none`` cámbiela a ``visibility: hidden`` Observe que la visibilidad oculta reserva espacio en la página para el elemento pero no lo muestra. Mientras que la regla ``display: none`` eliminó cualquier rastro del elemento. Ahora cambie la regla a ``visibility: show`` para mostrar todos los elementos.
 
-The display property can also be used to change block elements into inline elements.  Consider the following example.
+La propiedad de visualización también se puede utilizar para cambiar elementos de bloque en elementos en línea. Considere el siguiente ejemplo.
 
 .. activecode:: css_disp2
    :language: html
@@ -158,12 +158,12 @@ The display property can also be used to change block elements into inline eleme
    </html>
 
 
-This technique is often used in the navigation bar to create a "menu" of links.  See exercise 5 in the exercises section for some practice with this.
+Esta técnica se usa a menudo en la barra de navegación para crear un "menú" de enlaces. Vea el ejercicio 5 en la sección de ejercicios para practicar con esto.
 
 Floating
 --------
 
-The CSS float property allows us to push HTML elements to the left or right, so that other elements will wrap around them.  This can be extremely useful for images, but will also be very useful when we begin to work on more complex layouts for our pages.  Lets begin with a simple example.
+La propiedad float de CSS nos permite empujar elementos HTML hacia la izquierda o hacia la derecha, para que otros elementos los envuelvan. Esto puede ser extremadamente útil para las imágenes, pero también será muy útil cuando comencemos a trabajar en diseños más complejos para nuestras páginas. Comencemos con un ejemplo simple.
 
 .. activecode:: css_float1
    :language: html
@@ -179,40 +179,40 @@ The CSS float property allows us to push HTML elements to the left or right, so 
    </html>
 
 
-Notice that the logo appears right in the middle of the text in its normal inline flow.   Now, add a CSS rule for an img tag that sets the float property to left.   Then change the rule to float the image to the right.
+Observe que el logotipo aparece justo en el medio del texto en su flujo en línea normal. Ahora, agregue una regla CSS para una etiqueta img que establezca la propiedad flotante a la izquierda. Luego cambie la regla para hacer flotar la imagen a la derecha.
 
-Next lets add a second copy of the norse logo to the page by copying and pasting the image again.
+A continuación, agreguemos una segunda copia del logotipo nórdico a la página copiando y pegando la imagen nuevamente.
 
-Next, modify the html, and add a CSS rule so that one logo is floated to the left and the other is floated to the right.
+A continuación, modifique el html y agregue una regla CSS para que un logotipo flote a la izquierda y el otro a la derecha.
 
-The float property can also be applied to block elements.  This will cause the block elements to behave more like inline elements.
+La propiedad flotante también se puede aplicar a elementos de bloque. Esto hará que los elementos de bloque se comporten más como elementos en línea.
 
-The clear property is used to undo the effects of the float.
+La propiedad clear se usa para deshacer los efectos del float.
 
 
 
-Positioning
------------
+Posicionamiento
+----------------
 
-There are several different ways to affect the positioning of html elements either inside or outside of the normal flow of the layout.  
+Hay varias formas diferentes de afectar el posicionamiento de los elementos html dentro o fuera del flujo normal del diseño.
 
-* static
-* fixed
-* relative
-* absolute
+* estático
+* fijo
+* relativo
+* absoluto
 
-**Static** is the default positioning value for the css position property.  The static value simply tells the browser to position this element in the "normal flow" of the document.
+**Estático** es el valor de posicionamiento predeterminado para la propiedad de posición css. El valor estático simplemente le dice al navegador que coloque este elemento en el "flujo normal" del documento.
 
-**Fixed** positioning is measured against the frame of the browser window.  Elements with a fixed position value do not move even when the contents of the browser window are scrolled.  The navigation bar at the top of this page uses the fixed position value so it is always visible.  Because fixed elements are outside the flow of the document they can sometimes cause unexpected results that you have to deal with carefully.
+**Posicionamiento** fijo se mide contra el marco de la ventana del navegador. Los elementos con un valor de posición fijo no se mueven incluso cuando se desplaza el contenido de la ventana del navegador. La barra de navegación en la parte superior de esta página usa el valor de posición fija para que siempre esté visible. Debido a que los elementos fijos están fuera del flujo del documento, a veces pueden causar resultados inesperados con los que debe lidiar con cuidado.
 
-A **relatively** positioned element is measured relative to its normal position in the flow.  Using a relative position value lets you create elements that overlap each other.
+Un elemento posicionado **relativamente** se mide con relación a su posición normal en el flujo. El uso de un valor de posición relativa le permite crear elementos que se superponen entre sí.
 
-An **absolute** element is positioned relative to the first parent element that has a position other than static. If no such element is found, the containing block is the ``html`` tag for the entire document.  Absolutely positioned elements are positioned outside the normal flow of the document.
+Un elemento **absoluto** se posiciona en relación con el primer elemento padre que tiene una posición que no es estática. Si no se encuentra dicho elemento, el bloque contenedor es la etiqueta ``html`` para todo el documento. Los elementos posicionados de manera absoluta se ubican fuera del flujo normal del documento.
 
 Fixed
 ^^^^^
 
-Lets look at an example of how to use fixed positioning to create an element that stays put on the screen.
+Veamos un ejemplo de cómo usar el posicionamiento fijo para crear un elemento que permanezca en la pantalla.
 
 .. activecode:: css_pos1
    :language: html
@@ -260,23 +260,23 @@ Lets look at an example of how to use fixed positioning to create an element tha
    </body>
    </html>
 
-When you run the example above you will notice that its not quite right!  The text is overlapping and the page generally looks ugly.    The elements overlap because the fixed positioning takes the paragraph block element out of the flow.  Because its out of the flow the browser renders the ``ol`` as if it should be the first thing at the top of the page.
+Cuando ejecute el ejemplo anterior, notará que no está del todo bien. El texto se superpone y la página generalmente se ve fea. Los elementos se superponen porque el posicionamiento fijo saca el elemento de bloque de párrafo del flujo. Debido a que está fuera del flujo, el navegador muestra el ``ol`` como si fuera la primera cosa en la parte superior de la página.
 
 
-Your challenge is to fix the example so that the sentence stays nicely anchored to the top, but the ordered list begins below it.
+Su desafío es arreglar el ejemplo para que la oración permanezca bien anclada en la parte superior, pero la lista ordenada comienza debajo de ella.
 
 .. reveal:: css_pos_sol1
 
-   Here is one way to solve this problem.  Add a rule for the ``ol`` that specifies a top-margin.  Make the top margin large enough so that the list starts below the first paragraph.  You may need to experiment a little bit with some different values before you find one that works well.  Now you should also add some styling to the nav to give it a background color and make it fill the entire width of the window.
+   Aquí hay una forma de resolver este problema. Agregue una regla para el ``ol`` que especifique un margen superior. Haga que el margen superior sea lo suficientemente grande como para que la lista comience debajo del primer párrafo. Es posible que deba experimentar un poco con algunos valores diferentes antes de encontrar uno que funcione bien. Ahora también debe agregar un poco de estilo a la navegación para darle un color de fondo y hacer que ocupe todo el ancho de la ventana.
 
 Relative
 ^^^^^^^^
 
-Next lets look at the relative position and how we can use it to make overlapping elements.
+A continuación, veamos la posición relativa y cómo podemos usarla para hacer elementos superpuestos.
 
-.. take an image of a card and make a stacked deck of three cards.
+.. tome una imagen de una carta y haga un mazo de tres cartas apiladas.
 
-Lets make a stack of cards using the following image:
+Hagamos una pila de cartas usando la siguiente imagen:
 
 .. image:: Figures/ace-of-hearts.gif
 
@@ -298,12 +298,12 @@ Lets make a stack of cards using the following image:
    </body>
    </html>
 
-If you run the example you will see the three cards lined up next to each other.  As a reminder this is because:
+Si ejecuta el ejemplo, verá las tres cartas alineadas una al lado de la otra. Como recordatorio, esto se debe a que:
 
-1.  images are inline elements and so do not create a line break.
-2.  The browser lays out inline images top to bottom and left to right.
+1. las imágenes son elementos en línea y, por lo tanto, no crean un salto de línea.
+2. El navegador presenta imágenes en línea de arriba a abajo y de izquierda a derecha.
 
-Now lets use our positioning skills to create a stack.  Modify the example above to add the following css rule:
+Ahora usemos nuestras habilidades de posicionamiento para crear una pila. Modifique el ejemplo anterior para agregar la siguiente regla css:
 
 .. code-block:: css
 
@@ -313,7 +313,7 @@ Now lets use our positioning skills to create a stack.  Modify the example above
        left: -100px;
    }
 
-Great, now we have made the second card appear to be on top of the first.    Notice that although we have moved the second image, the position of the third image does not change.  This is because space is still reserved for the second image in its middle position, we are manually moving it relative to where it would normally be in the flow.  So a relative positioning works within the flow of the document.  Add a rule for the third image to add it to the stack.
+Genial, ahora hemos hecho que la segunda carta parezca estar encima de la primera. Tenga en cuenta que aunque hemos movido la segunda imagen, la posición de la tercera imagen no cambia. Esto se debe a que el espacio todavía está reservado para la segunda imagen en su posición media, lo estamos moviendo manualmente en relación con el lugar donde normalmente estaría en el flujo. Entonces, un posicionamiento relativo funciona dentro del flujo del documento. Agregue una regla para la tercera imagen para agregarla a la pila.
 
 .. reveal:: css_stack
 
@@ -327,24 +327,24 @@ Great, now we have made the second card appear to be on top of the first.    Not
 
 .. admonition:: Coordinates
 
-   You have no doubt noticed that we are using top and left values to position our box.  This box is positioned within the window where the coordinate 0,0 is in the top left corner.  The X or first coordinate gets larger as you move to the right across the windo, and the second, or Y coordinate grows larger is you move down the screen.  This takes a little adjustment as it is different from what  you learned in math class.
+   Sin duda ha notado que estamos utilizando los valores superior e izquierdo para posicionar nuestro cuadro. Este cuadro se coloca dentro de la ventana donde la coordenada 0,0 está en la esquina superior izquierda. La coordenada X o primera se agranda a medida que se mueve hacia la derecha a través de la ventana, y la coordenada segunda o Y se agranda al moverse hacia abajo de la pantalla. Esto requiere un pequeño ajuste, ya que es diferente de lo que aprendiste en la clase de matemáticas.
 
-   
-Now, what about elements that come after relatively positioned elements?  If you add a paragraph after the images do you expect the text to be covered up or flowed beneath all of the cards?
+   
+Ahora, ¿qué pasa con los elementos que vienen después de elementos relativamente posicionados? Si agrega un párrafo después de las imágenes, ¿espera que el texto se cubra o fluya debajo de todas las tarjetas?
 
-Another important thing to notice is that card 2 appears to be stacked on top of card 1, and card three appears to be stacked on top of cards 1 and 2.  This is becuase elements that come later in the document naturally appear on top of elements that come before them.
+Otra cosa importante a tener en cuenta es que la tarjeta 2 parece estar apilada encima de la tarjeta 1, y la tarjeta tres parece estar apilada encima de las tarjetas 1 y 2. Esto es porque los elementos que aparecen más adelante en el documento aparecen naturalmente encima de los elementos. que vienen antes que ellos
 
-If we want to change that and make it look like card 1 is on top of card 2 and card 2 is on top of card 3 we can use the css ``z-index`` property to position the elements.  elements that have a larger z-index will appear to be on top of items with a lower z-index.  By default, all elements have a z-idex of zero.  So to change the order of the stack we will need to modify the rules for images b and c.  Add a z-imaeg property to the ``img#b`` and ``img#c`` rules giving b a z-index of -1 and c a z-index of -2.
+Si queremos cambiar eso y hacer que parezca que la tarjeta 1 está encima de la tarjeta 2 y la tarjeta 2 está encima de la tarjeta 3, podemos usar la propiedad css ``z-index`` para colocar los elementos. los elementos que tienen un índice z más grande aparecerán encima de los elementos con un índice z más bajo. Por defecto, todos los elementos tienen un z-idex de cero. Entonces, para cambiar el orden de la pila, necesitaremos modificar las reglas para las imágenes b y c. Agregue una propiedad z-image a las reglas ``img#b`` e ``img#c`` dando a b un z-index de -1 y c un índice z de -2.
 
 
 .. admonition:: Advanced Topic: Transformation
 
-   CSS Provides the ability for us to really get fancy and transform any element by rotating or scaling.  We can make our stack of cards look much more like a hand of cards by exploring the `transform <http://www.w3schools.com/cssref/css3_pr_transform.asp>`_ property.  In fact the transform property is still so new that it goes by different names in different browsers.  For Chrome, Safari you will want to use the ``-webkit-transform`` property while in Firefox you can use ``transform``.  If you are Explorer you will need to use ``-ms-transform``.  In fact to write your page to work  anywhere you would specify all three!
+   CSS nos brinda la capacidad de ser realmente elegantes y transformar cualquier elemento al rotar o escalar. Podemos hacer que nuestra pila de cartas se parezca mucho más a una mano de cartas explorando la propiedad `transform <http://www.w3schools.com/cssref/css3_pr_transform.asp>`_. De hecho, la propiedad de transformación aún es tan nueva que tiene diferentes nombres en diferentes navegadores. Para Chrome, Safari, querrá usar la propiedad ``-webkit-transform``, mientras que en Firefox puede usar ``transform``. Si usas Explorer, necesitarás usar ``-ms-transform``. De hecho, para escribir su página para trabajar en cualquier lugar, ¡debería especificar los tres!
    
 Absolute
 --------
 
-Absolutely positioned elements are absolute, but relative to their container!  The official rule is that absolute items are positioned using the the upper left corner of the first non-static container as the origin.  If there is no non-static container, then the html tag will be used and the origin will be the upper left corner of the page.
+¡Los elementos posicionados absolutamente son absolutos, pero relativos a su contenedor! La regla oficial es que los artículos absolutos se colocan utilizando la esquina superior izquierda del primer contenedor no estático como origen. Si no hay un contenedor no estático, se usará la etiqueta html y el origen será la esquina superior izquierda de la página.
 
 .. activecode:: css_pos3
    :language: html
@@ -379,15 +379,15 @@ Absolutely positioned elements are absolute, but relative to their container!  T
    </body>
    </html>
 
-OK, what happened to the second card?  How can you make a stack that looks like the stack from our relatively positioned element?  What happens if you add an h1 in front of the main tag?
+OK, ¿qué pasó con la segunda carta? ¿Cómo puedes hacer una pila que se parezca a la pila de nuestro elemento relativamente posicionado? ¿Qué sucede si agrega un h1 frente a la etiqueta principal?
 
 
 
 
 
 
-Full Page Layout
-----------------
+Disposicón de Página Completa
+------------------------------
 
 
 .. activecode:: css_layout1
@@ -462,8 +462,8 @@ Full Page Layout
     </html>
 
 
-This looks pretty good.  It almost matches the picture in the aside area. This is a pretty typical layout for a good quality page, and you can use this as a template for your own homepage.  However it is missing the article area, and there is an ugly black band between the nav and the tops of the aside and section.  See if you can do the following:
+Esto se ve bastante bien. Casi coincide con la imagen en el área lateral. Este es un diseño bastante típico para una página de buena calidad, y puede usarlo como plantilla para su propia página de inicio. Sin embargo, le falta el área del artículo, y hay una banda negra fea entre el navegador y la parte superior de la sección a un lado. Vea si puede hacer lo siguiente:
 
-1.  Remove the black band.  Hint:  A good way to find out why things look the way they do is to use the "Inspect Element" feature of your browser.  If you right click on an area that interests you, you will be able to see all of the css rules including the default style rules that affect a particular element.
+1. Retire la banda negra. Sugerencia: Una buena manera de averiguar por qué las cosas se ven como las ves puedes usar la función "Inspeccionar elemento" de su navegador. Si hace clic con el botón derecho en un área que le interesa, podrá ver todas las reglas CSS, incluidas las reglas de estilo predeterminadas que afectan a un elemento en particular.
 
-2.  Add an article area as shown in the picture.  Give it a purple background.  As you try to to make this area match the picture think about the effects of the various things you may try.
+2. Agregue un área de artículo como se muestra en la imagen. Dale un fondo morado. Mientras intenta hacer que esta área coincida con la imagen, piense en los efectos de las diversas cosas que puede probar.

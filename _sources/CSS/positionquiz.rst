@@ -1,15 +1,15 @@
-Positioning Quiz
-----------------
+Prueba de Posicionamiento
+---------------------------
 
-Today's quiz has only one question, you may use your textbook to refer to as well as other examples you may have saved from class.  I will use only your final result, so don't forget to save.   This may prove to be quite challenging, but don't worry, I will give plenty of partial credit.
+El cuestionario de hoy solo tiene una pregunta, puede usar su libro de texto para consultar y otros ejemplos que haya guardado de la clase. Usaré solo su resultado final, así que no olvide guardar. Esto puede resultar bastante desafiante, pero no se preocupe, le daré mucho crédito parcial.
 
 .. reveal:: positionquiz
 
-   Starting with the HTML I give you, you must recreate the image below.
+   Comenzando con el HTML que le doy, debe recrear la imagen a continuación.
 
    .. image:: Figures/quiz2b.png
 
-   Dimensions:  The green box is 400px wide and 300px high and is centered with a top margin of 50px.  The pink boxes are 150px high and 150px wide.  The are positioned 20px from the edges of the green box.  The text in the pink boxes is centered and is 20px from the top of the pink box.
+   Dimensiones: el cuadro verde mide 400 px de ancho y 300 px de alto y está centrado con un margen superior de 50 px. Las cajas rosadas tienen 150 px de alto y 150 px de ancho. Se colocan a 20 px de los bordes del cuadro verde. El texto en los cuadros rosados está centrado y está a 20 píxeles de la parte superior del cuadro rosado.
 
    .. actex:: q2_1
       :language: html

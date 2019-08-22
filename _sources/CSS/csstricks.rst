@@ -1,10 +1,10 @@
-CSS Tricks
-==========
+Trucos en CSS
+===============
 
-**DRAFT**  This chapter is a work in progress.
+**BORRADOR** Este capítulo es un trabajo en progreso.
 
-CSS is used for all kinds of special effects that make web pages look good.  In this section we will investigate some
-of them.
+CSS se utiliza para todo tipo de efectos especiales que hacen que las páginas web se vean bien. En esta sección investigaremos algunos
+de ellos.
 
 Hover
 -----
@@ -85,11 +85,11 @@ Hover
     </html>
 
 
-* Add link with a :hover pseudo-class to the example above.
-* Add an ``h2`` with the title more info.  Underneath the h2 add  a ``main`` container with a paragraph.  The details element should be initially hidden and only appear when you hover the cursor over the h2.  Hint:  the ``~`` character allows you to write a selector that matches a sibling.
+* Agregue un enlace con una pseudoclase:hover al ejemplo anterior.
+* Agregue un ``h2`` con el título más información. Debajo del h2, agregue un contenedor ``principal`` con un párrafo. El elemento de detalles debe estar inicialmente oculto y solo aparecerá cuando pase el cursor sobre el h2. Sugerencia: el carácter ``~`` le permite escribir un selector que coincida con un hermano.
 
 
-The details tag is a semantic tag that has some very nice properties similar to our experiment above.
+La etiqueta details es una etiqueta semántica que tiene algunas propiedades muy buenas similares a nuestro experimento anterior.
 
 .. activecode:: html_details
    :language: html
@@ -103,14 +103,14 @@ The details tag is a semantic tag that has some very nice properties similar to 
 
 
 
-Animation
----------
+Animaciones
+-------------
 
-Using the ``@keyframes`` keyword we can create an animation and then apply that animation to other css elements.  Check out the following example
-that animates the background color.  With keyframes we can specify a starting and and ending condition using
-``from`` and ``to`` or we can specify multiple points along the animation using ``xx%``.
+Usando la palabra clave ``@keyframes`` podemos crear una animación y luego aplicar esa animación a otros elementos CSS. Mira el siguiente ejemplo
+eso anima el color de fondo. Con fotogramas clave podemos especificar una condición inicial y final utilizando
+``from`` y ``to`` o podemos especificar varios puntos a lo largo de la animación usando ``xx%``.
 
-Animation should work as shown in all modern browsers.  Safari version 8 and earlier will require the ``-webkit-`` prefix to be added.
+La animación debería funcionar como se muestra en todos los navegadores modernos. Safari versión 8 y anteriores requerirán que se agregue el prefijo ``-webkit-``.
 
 
 .. activecode:: animation1
@@ -141,7 +141,7 @@ Animation should work as shown in all modern browsers.  Safari version 8 and ear
    </html>
 
 
-Experiment with the following:
+Experimente con lo siguiente:
 
 * ``animation-delay: 2s;``
 * ``animation-iteration-count: infinite;``
@@ -171,8 +171,7 @@ Experiment with the following:
        }
    }
 
-* Add an image to the picture and make it spin infinitely.
-* try creating a scale animation
-* Use ``animation-fill-mode: forwards;`` to keep the element at the ending position.
-
+* Agregue una imagen a la imagen y haga que gire infinitamente.
+* intenta crear una animación a escala
+* Use ``animation-fill-mode: forwards;`` para mantener el elemento en la posición final.
 

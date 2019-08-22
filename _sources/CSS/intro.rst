@@ -1,14 +1,14 @@
-Introduction to CSS
+Introducción a CSS
 ===================
 
-CSS stands for Cascading Style Sheets.  Style sheets define how to display your html code.  This was not always the case.  In HTML 3 the designers of the language added tags like font and color. This was great for companies like Microsoft where you could export your word doc as html, but created a nightmare for developers of large sites that were not developed using WYSIWYG tools, and it made the html completely unreadable.  So, in HTML 4.0 CSS was introduced to fix the problem we created for ourselves.
+CSS viene de Cascading Style Sheets que significa hojas de estilo en cascada. Las hojas de estilo definen cómo mostrar su código html. Este no fue siempre el caso. En HTML 3, los diseñadores del lenguaje agregaron etiquetas como fuente y color. Esto fue excelente para empresas como Microsoft, donde se podía exportar su documento de Word como html, pero creó una pesadilla para los desarrolladores de sitios grandes que no se desarrollaron utilizando herramientas WYSIWYG, e hizo que el html fuera completamente ilegible. Entonces, en HTML 4.0 se introdujo CSS para solucionar el problema que creamos para nosotros mismos.
 
-CSS defines how the html should look, and it does this using a set of rules.  We are all used to following certain rules in every day life:  **If** it is raining, **then** take your umbrella.  **If** the light is red, **then** come to a stop at the stoplight.  In html terms we might say, **if** the tag is an ``h1`` **then** color it blue and set the font size to 28 points.
+CSS define cómo debería verse el html, y lo hace usando un conjunto de reglas. Todos estamos acostumbrados a seguir ciertas reglas en la vida diaria: **Si** está lloviendo, **entonces** tome su paraguas. **Si** la luz es roja, **entonces** deténgase en el semáforo. En términos html podríamos decir, **si** la etiqueta es un ``h1``, **entonces **colorea de azul y establece el tamaño de la fuente en 28 puntos**.
 
-CSS Syntax
-----------
+Sintaxis CSS
+-------------
 
-To tell the computer about these if/then rules, we need a consistent syntax.  The syntax for CSS has two parts, a selector and a declaration.
+Para informarle a la computadora sobre estas reglas if/then, necesitamos una sintaxis consistente. La sintaxis para CSS tiene dos partes, un selector y una declaración.
 
 .. code-block:: css
 
@@ -17,11 +17,11 @@ To tell the computer about these if/then rules, we need a consistent syntax.  Th
        declaration;
        }
 
-The declaration itself consists of two parts: a property and a value.  There are many many CSS properties and we willl look at a lot of them, but for now, just think of the property as something like color, font-size, font-family, etc.
+La declaración en sí consta de dos partes: una propiedad y un valor. Hay muchísimas propiedades en CSS y veremos muchas de ellas, pero por ahora, solo piense en la propiedad como algo así como color, tamaño de fuente, familia de fuentes, etc.
 
-Selectors can be as simple as a tag name, or a very complex pattern to match.  We will start with some very simple selectors and work our way up to the more complex.
+Los selectores pueden ser tan simples como un nombre de etiqueta o un patrón muy complejo para que coincida. Comenzaremos con algunos selectores muy simples y avanzaremos hasta los más complejos.
 
-Without further fuss, lets look at a CSS rule for coloring h1 tags blue, and changing their font to 28 points.
+Sin más complicaciones, veamos una regla CSS para colorear las etiquetas h1 de azul y cambiar su fuente a 28 puntos.
 
 .. code-block:: css
 
@@ -31,16 +31,16 @@ Without further fuss, lets look at a CSS rule for coloring h1 tags blue, and cha
    }
 
 
-Including CSS in Your Page
---------------------------
+Incluyendo CSS en su página
+-----------------------------
 
-There are three ways to include CSS in your html document.
+Hay tres formas de incluir CSS en su documento html.
 
-* You can add a style attribute to a tag.  This should not be used very often, if ever!
-* You can embed your CSS in your file inside a ``style`` tag.  We'll use this method in this book for convenience.
-* You can put all of your CSS in a separate style file and include the style file into your HTML.  This is the preferred way of doing it because it achieves the greatest amount of separation between the content and how the content looks.
+* Puede agregar un atributo de estilo a una etiqueta. ¡Esto no debe usarse muy a menudo, o más bien nunca!
+* Puede incrustar su CSS en su archivo dentro de una etiqueta de ``style``. Utilizaremos este método en este libro por conveniencia.
+* Puede poner todo su CSS en un archivo de estilo separado e incluir el archivo de estilo en su HTML. Esta es la forma preferida de hacerlo porque logra la mayor cantidad de separación entre el contenido y cómo se ve el contenido.
 
-Lets now look at a complete example:
+Veamos ahora un ejemplo completo:
 
 .. activecode:: css_rule_1
    :language: html
@@ -63,20 +63,20 @@ Lets now look at a complete example:
    </html>
 
 
-There are several things to notice about the example above.  First the ``h1`` selector matches all of the h1 tags in the document.  But it does not match the ``h2`` or the ``p`` tags.  If you want to change the style of the paragraph you need to add another rule.  Lets try it:  Add a rule to the style tag that colors the paragraph text green.  Then make another rule that makes the h2 tag size 16pt and yellow.
+Hay varias cosas a tener en cuenta sobre el ejemplo anterior. Primero, el selector ``h1`` coincide con todas las etiquetas h1 en el documento. Pero no coincide con las etiquetas ``h2`` o ``p``. Si desea cambiar el estilo del párrafo, debe agregar otra regla. Probémoslo: agregue una regla a la etiqueta de estilo que colorea de verde el texto del párrafo. Luego haga otra regla que haga que el tamaño de la etiqueta h2 sea de 16 puntos y amarillo.
 
-One thing to be careful about is to remember the semi-colons after the values.  If you forget a semi-colon, then your rule will not work.
+Una cosa a tener cuidado es recordar los punto y coma después de los valores. Si olvida un punto y coma, su regla no funcionará.
 
 
-Using a separate css file is the most preferred way to organize your CSS.  This allows you to use the same style in multiple web pages, and in a group setting makes it easy for one person to work on the style while another focuses on the content.  CSS stylesheets are included in a web page by using the ``link`` tag in the ``head`` section of your page as follows:
+Usar un archivo css separado es la forma más preferida de organizar tu CSS. Esto le permite usar el mismo estilo en varias páginas web, y en una configuración grupal facilita que una persona trabaje en el estilo mientras que otra se enfoca en el contenido. Las hojas de estilo CSS se incluyen en una página web mediante el uso de la etiqueta ``link`` en la sección ``head`` de su página de la siguiente manera:
 
 .. code-block:: html
 
    <link rel="stylesheet" href="mystyle.css" type="text/css">
 
-Cascading
+Cascada
 ---------
 
-Since you can add style information about a tag in any or all of the three places, how is the style resolved if different sources provide conflicting information?
+Dado que puede agregar información de estilo sobre una etiqueta en cualquiera de los tres lugares, ¿cómo se resuelve el estilo si diferentes fuentes proporcionan información contradictoria?
 
-Default rules from the browser are combined with rules from an external Style Sheet are combined with the rules contained in any style tags in the page itself.  If there is a conflict then then internal style tag wins.  These rules are then combined with any style information contained in a style attribute.  If the style attribute conflicts with any previous informatin, it wins.
+Las reglas predeterminadas del navegador se combinan con las reglas de una hoja de estilo externa y las reglas contenidas en las etiquetas de estilo de la página. Si hay un conflicto, entonces gana la etiqueta de estilo interno. Estas reglas se combinan con cualquier información de estilo contenida en un atributo de estilo. Si el atributo de estilo entra en conflicto con cualquier información anterior, gana.

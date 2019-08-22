@@ -1,21 +1,21 @@
-Changing the Style of an HTML Element
-=====================================
+Cambiar el Estilo de un Elemento HTML
+======================================
 
-There are many ways that we can change the style of what we see in the browser.  In this section we will look at examples of the following:
+Hay muchas maneras en que podemos cambiar el estilo de lo que vemos en el navegador. En esta sección veremos ejemplos de lo siguiente:
 
-* background
-* text
-* font
+* fondo
+* texto
+* fuente
 
-But before we talk about these, we need to think about colors.  There are three different ways to specify the color.
+Pero antes de hablar sobre esto, debemos pensar en los colores. Hay tres formas diferentes de especificar el color.
 
-* by name, like blue, red, green.  You can see a complete list of `color names <http://www.w3schools.com/cssref/css_colors.asp>`_ on the w3schools website.
-* using an RGB value like ``rgb(255,0,0)``
-* using a HEX value like ``#ff0000``
+* por nombre, como azul, rojo, verde. Puede ver una lista completa de `nombres de colores <http://www.w3schools.com/cssref/css_colors.asp>`_ en el sitio web de w3schools.
+* usando un valor RGB como ``rgb(255,0,0)``
+* utilizando un valor HEX como ``#ff0000``
 
-Using either the RGB or the HEX value gives you total control to specify any of of 16 million different colors.  There is a bit of interesting computer science behind the RGB and HEX values.  The rgb function lets you specify a value between 0 and 255 for each component of red, green, and blue.  By mixing together a certain amount of red, green, and blue you can create :math:`255 \cdot 255 \cdot 255` different colors, which is slightly more than 16.5 million.  Now where does the number 255 come from?  It is one less than :math:`2^8`.  Computer scientists like powers of two because when you get deeply into the inner workings of the computer you see that everything is in binary (ones or zeros) which we call bits.  With eight bits we can specify 256 different values or 0 -- 255.  We call eight bits one byte.
+El uso del valor RGB o HEX le brinda un control total para especificar cualquiera de los 16 millones de colores diferentes. Hay un poco de informática interesante detrás de los valores RGB y HEX. La función rgb le permite especificar un valor entre 0 y 255 para cada componente de rojo, verde y azul. Al mezclar una cierta cantidad de rojo, verde y azul puede crear: matemática:`255 \cdot 255 \cdot 255` colores diferentes, que es un poco más de 16.5 millones. ¿De dónde viene el número 255? Es uno menos que: matemáticas:`2^8`. A los informáticos les gustan los poderes de dos porque cuando entras profundamente en el funcionamiento interno de la computadora, ves que todo está en binario (unos o ceros) que llamamos bits. Con ocho bits podemos especificar 256 valores diferentes o 0 - 255. Llamamos ocho bits a un byte.
 
-Now the HEX specification of the number is directly related to the binary as follows:
+Ahora la especificación HEX del número está directamente relacionada con el binario de la siguiente manera:
 
 ======  ===  =======
 binary  hex  decimal
@@ -38,19 +38,19 @@ binary  hex  decimal
 1111     f   15
 ======  ===  =======
 
-When specifying a color using the HEX system the first two characters are for the red, the second two for the green, and the last are for the blue.  There are lots of color picking tools that you can use that will let you choose the color you want and then tell you the appropriate hex value.
+Al especificar un color usando el sistema HEX, los dos primeros caracteres son para el rojo, los dos últimos para el verde y los últimos para el azul. Hay muchas herramientas de selección de color que puede usar que le permitirán elegir el color que desee y luego le indicará el valor hexadecimal apropiado.
 
 
-Background
-----------
+Fondo
+-------
 
-CSS has the following properties which we can use to change the background.
+CSS tiene las siguientes propiedades que podemos usar para cambiar el fondo.
 
-* background-color
-* background-image
-* background-repeat
-* background-attachment
-* background-position
+* color de fondo
+* imagen de fondo
+* repetición de fondo
+* fondo adjunto
+* posición de fondo
 
 .. activecode:: css_bkgrd_1
    :language: html
@@ -76,17 +76,17 @@ CSS has the following properties which we can use to change the background.
    </html>
 
 
-Text
-----
+Texto
+------
 
-* text-color
-* text-align
-* text-decoration
-* text-transformation
+* color de texto
+* texto alineado
+* decoración de texto
+* transformación de texto
 
-Font
-----
+Fuente
+-------
 
-* font-family
-* font-style
-* font-size
+* familia tipográfica
+* estilo de fuente
+* tamaño de fuente

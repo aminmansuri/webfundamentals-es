@@ -1,14 +1,14 @@
-The Dropdown Menu Project
-=========================
+El Proyecto del Menú Desplegable
+=================================
 
-In this section we will take on a full project to make some nice navigational dropdown menus with submenus.  This is not a simple project, so we will follow good programming practice and develop our solution iteratively.
+En esta sección, realizaremos un proyecto completo para crear algunos menús desplegables de navegación con submenús. Este no es un proyecto simple, por lo que seguiremos las buenas prácticas de programación y desarrollaremos nuestra solución de forma iterativa.
 
-Step One
---------
+Primer Paso
+------------
 
-Before we add any CSS rules at all lets get the menu structure and some page contents in place.   This is not going to look pretty but it will give us a starting place.  This  is almost always a good practice in web development.  Get the basic structure in place first, then incrementally make some improvements.  The reason to do it this way is simple, if you add small things one at a time its easy to tell when you do something wrong, and you automatically know that it was the last thing you did that caused the problem.
+Antes de agregar cualquier regla CSS, vamos a tener la estructura del menú y algunos contenidos de la página en su lugar. Esto no se verá bonito, pero nos dará un punto de partida. Esto es casi siempre una buena práctica en el desarrollo web. Primero, coloque la estructura básica en su lugar, luego realice progresivamente algunas mejoras. La razón para hacerlo de esta manera es simple: si agrega pequeñas cosas de una en una, es fácil saber cuándo hace algo mal, y automáticamente sabe que fue lo último que hizo que causó el problema.
 
-We have two main semantic areas in our page, the navigation menu main contents.  We will separate these two by placing the navigation menu inside a nav tag, and the main contents inside a main tag.
+Tenemos dos áreas semánticas principales en nuestra página, el contenido principal del menú de navegación. Los separaremos colocando el menú de navegación dentro de una etiqueta de navegación y los contenidos principales dentro de una etiqueta principal.
 
 .. activecode:: menu_1
    :language: html
@@ -67,14 +67,14 @@ We have two main semantic areas in our page, the navigation menu main contents. 
 
 
 
-Step Two
---------
+Segundo Paso
+--------------
 
-Now that the content is in place, let us set some background colors for things, and position our semantic elements.  In this case we want our navigational menu to be on the left side of the page, with the main content to the right.
+Ahora que el contenido está en su lugar, establezcamos algunos colores de fondo para las cosas y ubiquemos nuestros elementos semánticos. En este caso, queremos que nuestro menú de navegación esté en el lado izquierdo de la página, con el contenido principal a la derecha.
 
-We can position on nav on the left and have the main just to the right of it using the ``float: left`` property.  Notice that we set our width for the nav element to be ``7em``, using an ``em`` as a unit of measure in this case is a good idea because it will scale the width of our nav bar if we change the size of our font.  Try setting the font size in the body tag and notice that everything grows proportionally.
+Podemos posicionarnos en el navegador a la izquierda y tener el principal justo a la derecha usando la propiedad ``float: left``. Tenga en cuenta que establecemos nuestro ancho para que el elemento de navegación sea ``7em``, usar un ``em`` como unidad de medida en este caso es una buena idea porque escalará el ancho de nuestra barra de navegación si cambiamos El tamaño de nuestra fuente. Intente configurar el tamaño de fuente en la etiqueta del cuerpo y observe que todo crece proporcionalmente.
 
-We give the nav its own background color for now, just to make it easy to differentiate between area that belongs to the nav, and the area that belongs to main.
+Por ahora, le damos al navegador su propio color de fondo, solo para facilitar la diferenciación entre el área que pertenece al navegador y el área que pertenece al principal.
 
 .. activecode:: menu_2
    :language: html
@@ -155,10 +155,10 @@ We give the nav its own background color for now, just to make it easy to differ
    </html>
    
 
-Step Three
-----------
+Tercer Paso
+-------------
 
-Next lets change our indentation of the sublists using the following three rules:
+A continuación, cambiemos nuestra sangría de las sublistas usando las siguientes tres reglas:
 
 .. code-block:: css
 
@@ -184,9 +184,9 @@ Next lets change our indentation of the sublists using the following three rules
        display: block;
    }
    
-We set the margin of the uls inside the the nav element (nav ul) to have a margin of 0 because by default they have a non-zero margin, which will make our positioning more difficult later.  The same goes for the padding.  We also set the background to white, and give the bottom a little border.  Setting the list sytle to none removes the bullets. 
+Establecemos el margen de los uls dentro del elemento de navegación (nav ul) para que tenga un margen de 0 porque por defecto tienen un margen distinto de cero, lo que hará que nuestro posicionamiento sea más difícil más adelante. Lo mismo ocurre con el relleno. También establecemos el fondo en blanco, y le damos al borde un pequeño borde. Establecer la lista sytle en none elimina las viñetas.
 
-Notice that we add two position properties.  The ``nav li`` items are positioned relatively, but we don't change the top or left property.  This is simply in preparation for the next rule  ``nav ul ul`` which positions the submenus using absolute measurements.  We can use absolute here because the ul's in question will all be children of li's that have been positioned relatively.  Remember the rule for using absolute position is that the absolute position is relative to the first container that is not statically positioned.  Or else the html tag if no non static tag is found.
+Observe que agregamos dos propiedades de posición. Los elementos ``nav li`` están posicionados relativamente, pero no cambiamos la propiedad superior o izquierda. Esto es simplemente en preparación para la siguiente regla ``nav ul ul`` que posiciona los submenús usando mediciones absolutas. Podemos usar absoluto aquí porque los ul en cuestión serán todos hijos de li que se han posicionado relativamente. Recuerde que la regla para usar la posición absoluta es que la posición absoluta es relativa al primer contenedor que no está posicionado estáticamente. O bien, la etiqueta html si no se encuentra una etiqueta no estática.
 
 .. activecode:: menu_3
    :language: html
@@ -292,10 +292,10 @@ Notice that we add two position properties.  The ``nav li`` items are positioned
    </html>
    
 
-Step Four
----------
+Cuarto Paso
+-------------
 
-In this step we add single rule to deal with a small problem.  The problem is that you can only click on a link when the mouse is hovering over a link.  We want to be able to click anywhere in the box containing an a tag.  Changing the display property of the a tag will allow it to fill the enclosing container
+En este paso agregamos una sola regla para lidiar con un pequeño problema. El problema es que solo puede hacer clic en un enlace cuando el mouse se encuentra sobre un enlace. Queremos poder hacer clic en cualquier lugar del cuadro que contenga una etiqueta. Cambiar la propiedad de visualización de una etiqueta le permitirá llenar el contenedor que lo encierra
 
 .. code-block:: css
 
@@ -416,18 +416,18 @@ In this step we add single rule to deal with a small problem.  The problem is th
    </html>
 
 
-Step Five
----------
+Quinto Paso
+------------
 
-Before moving on to the final set of new rules, modify the code above and just change the display property in the ``nav ul ul`` rule to none;  When you redisplay our page you will see that this makes all the submenus invisible.  I've made this change to that rule in the next step, but its good to see how it works all by itself.
-   
-Finally we will bring everything together, with a few small rules. 
+Antes de pasar al conjunto final de nuevas reglas, modifique el código anterior y simplemente cambie la propiedad de visualización en la regla ``nav ul ul`` a ninguna; Cuando vuelva a mostrar nuestra página, verá que esto hace que todos los submenús sean invisibles. He hecho este cambio a esa regla en el siguiente paso, pero es bueno ver cómo funciona por sí solo.
+   
+Finalmente, juntaremos todo, con unas pocas reglas pequeñas.
 
-Lets change the background color when we hover over any list item.
+Cambiemos el color de fondo cuando pasemos el cursor sobre cualquier elemento de la lista.
 
-Lets also add a background image to indicate that something is a submenu.
+También agreguemos una imagen de fondo para indicar que algo es un submenú.
 
-The last rule makes a submenu visible!  ``display: block;``  But we want to distinguish between the various levels by adding classes to them.  So we need to also modify our html to add classes to the ul's and the li's.
+¡La última regla hace visible un submenú! ``display: block;`` Pero queremos distinguir entre los distintos niveles añadiéndoles clases. Por lo tanto, también debemos modificar nuestro html para agregar clases a las ul y las li.
 
 .. code-block:: css
 
@@ -448,7 +448,7 @@ The last rule makes a submenu visible!  ``display: block;``  But we want to dist
        display:block;
    }
 
-The change we need to make is to 
+El cambio que necesitamos hacer es
 
 .. activecode:: menu_5
    :language: html

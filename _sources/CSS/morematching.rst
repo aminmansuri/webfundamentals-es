@@ -1,13 +1,13 @@
-More on Matching
-================
+Más Sobre Emparejamiento
+=========================
 
-Now that we know how to change some style elements on tags we can move on and learn more about selectors and how to use selectors in conjunction with two new html attributes that give us a lot more flexibility in styling an html document.
+Ahora que sabemos cómo cambiar algunos elementos de estilo en las etiquetas, podemos seguir adelante y aprender más sobre los selectores y cómo usar los selectores junto con dos nuevos atributos html que nos dan mucha más flexibilidad para diseñar un documento html.
 
 
-Matching multiple tags
-----------------------
+Emparejamiento de Múltiples Etiquetas
+---------------------------------------
 
-suppose we want to have h1, h2, and h3 headers in blue, but h4, h5, and h6 headers in green?  We do not have to write a separate rule for each header tag, we can write one rule that looks like this:
+supongamos que queremos tener encabezados h1, h2 y h3 en azul, pero los encabezados h4, h5 y h6 en verde. No tenemos que escribir una regla separada para cada etiqueta de encabezado, podemos escribir una regla que se vea así:
 
 .. code-block:: css
 
@@ -20,9 +20,9 @@ suppose we want to have h1, h2, and h3 headers in blue, but h4, h5, and h6 heade
    }
 
 
-You can read the commas between the tags as "or."  So the first of the above rules read as If the tag is h1 or h2 or h3 then change the color to blue.
+Puede leer las comas entre las etiquetas como "or". Entonces, la primera de las reglas anteriores se lee como Si la etiqueta es h1 o h2 o h3, cambie el color a azul.
 
-In the example below, add a rule so that the h2 and the paragraph have the color red.
+En el ejemplo a continuación, agregue una regla para que h2 y el párrafo tengan el color rojo.
 
 .. activecode:: css_or
    :language: html
@@ -45,13 +45,13 @@ In the example below, add a rule so that the h2 and the paragraph have the color
    </html>
 
 
-Using an id attribute in a rule
--------------------------------
+Usar un Atributo id en una Regla
+----------------------------------
 
-Another common situation is that you have one particular paragraph that you want to have in a different color.  You cannot just use a selector that matches the p tag as that will match all of the p tags.  So in this case we need to somehow mark a particular paragraph so that we can have a selector that selects that paragraph and only that paragraph.  This is where the ``id`` attribute is used.    Any html tag can have an id attribute, which serves as a **unique identifier** for that tag.  In fact, the value of the id attribute must be unique throughout the file.
+Otra situación común es que tiene un párrafo en particular que desea tener en un color diferente. No puede simplemente usar un selector que coincida con la etiqueta p, ya que coincidirá con todas las etiquetas p. Entonces, en este caso, debemos marcar de alguna manera un párrafo en particular para que podamos tener un selector que seleccione ese párrafo y solo ese párrafo. Aquí es donde se usa el atributo ``id``. Cualquier etiqueta html puede tener un atributo id, que sirve como un **identificador único** para esa etiqueta. De hecho, el valor del atributo id debe ser único en todo el archivo.
 
 
-In the example below we have two rules.  One that changes the text to blue in all paragraphs.  The second rule changes the font-size to 18pt for the paragraph that has the identifier of "abc456"  The hashtag ``#`` is very important to this rule as it tells the css matcher that what comes after that hashtag must match the id attribute of some element.  So, in fact the p is redundant in this example, and you could remove the p from the beginning of the selector and the rule would still work.  In fact, you should try that now.
+En el siguiente ejemplo tenemos dos reglas. Uno que cambia el texto a azul en todos los párrafos. La segunda regla cambia el tamaño de fuente a 18 puntos para el párrafo que tiene el identificador de "abc456". El hashtag ``#`` es muy importante para esta regla, ya que le dice al css matcher que lo que viene después de ese hashtag debe coincidir con la identificación atributo de algún elemento. Entonces, de hecho, la p es redundante en este ejemplo, y podría eliminar la p desde el comienzo del selector y la regla aún funcionaría. De hecho, deberías probar eso ahora.
 
 .. activecode:: css_ids
    :language: html
@@ -77,20 +77,20 @@ In the example below we have two rules.  One that changes the text to blue in al
    </html>
 
 
-What do you think will happen if you change the second rule so that it sets the color to red?   If you said that it will keep the first paragraph's color blue but change the second to red, your are correct.  Why does the second rule over-rule the first?  Because the second rule is more specific.  You might have thought it was because of the order of the rules, but in fact you can change the order of the two rules and try it and you will see that you still get the same result.
+¿Qué crees que sucederá si cambias la segunda regla para que establezca el color en rojo? Si dijiste que mantendrá el color azul del primer párrafo pero cambiará el segundo a rojo, estás en lo correcto. ¿Por qué la segunda regla prevalece sobre la primera? Porque la segunda regla es más específica. Es posible que haya pensado que fue debido al orden de las reglas, pero de hecho puede cambiar el orden de las dos reglas y probarlo, y verá que aún obtiene el mismo resultado.
 
-Using the class attribute in a rule
------------------------------------
+Usar un Atributo de Clase en una Regla
+----------------------------------------
 
-Sometimes you want to match some elements that are the same tag but not others.  One example of this is when you want to have a "zebra striped" table, where every other line has a slightly different background color then you are going to want to use a ``class`` attribute.  Classes and CSS may be the single most useful combination for styling your web pages.
+A veces, desea hacer coincidir algunos elementos que son la misma etiqueta pero no otros. Un ejemplo de esto es cuando desea tener una tabla de "rayas de cebra", donde cualquier otra línea tiene un color de fondo ligeramente diferente, entonces querrá usar un atributo de ``clase``. Las clases y CSS pueden ser la combinación más útil para diseñar sus páginas web.
 
-Unlike the ``id`` attribute, many different tags can have the same value for a class.  Some examples:
+A diferencia del atributo ``id``, muchas etiquetas diferentes pueden tener el mismo valor para una clase. Algunos ejemplos:
 
-You have paragraphs or headings and you want some normal, some are "warnings", some are "errors", and some are "cautions".   Or perhaps you have a list of things, some things one the list are hight priority, some are low, and some are medium.  By using a class you can apply a consistent style to all of the things that belong to that class (have the same value for their class attribute.)
+Tiene párrafos o encabezados y desea algo normal, algunos son "advertencias", algunos son "errores" y otros son "precauciones". O tal vez tenga una lista de cosas, algunas de las cuales son de alta prioridad, algunas son bajas y otras son medianas. Al usar una clase, puede aplicar un estilo consistente a todas las cosas que pertenecen a esa clase (tienen el mismo valor para su atributo de clase).
 
-To select any element that matches a particular class you use the ``.`` before the name of the class.  So ``.high`` will match any tags that have the attribute ``class=high``.
+Para seleccionar cualquier elemento que coincida con una clase en particular, use el `` .`` antes del nombre de la clase. Entonces ``.high`` coincidirá con cualquier etiqueta que tenga el atributo ``class=high``.
 
-Returning to our HTML table example we have some rows that are "odd" and some that are "even".  Lets make a short table and style the odd and even rows differently.
+Volviendo a nuestro ejemplo de tabla HTML, tenemos algunas filas que son "impares" y algunas que son "pares". Hagamos una tabla corta y estilo las filas pares e impares de manera diferente.
 
 .. activecode:: css_classes
    :language: html
@@ -118,13 +118,13 @@ Returning to our HTML table example we have some rows that are "odd" and some th
 
 
 
-Now for some additional practice lets make the table look really nice.  Add a header and have the background of the header be light gray.  Make the text of the header bold and slightly larger.  Overall change the table so its width is 50% of the page and get rid of the page. `This page <http://www.w3schools.com/css/css_table.asp>`_ gives you a complete rundown on how to style tables.
+Ahora, para practicar un poco más, hagamos que la mesa se vea realmente agradable. Agregue un encabezado y haga que el fondo del encabezado sea gris claro. Haga el texto del encabezado en negrita y ligeramente más grande. En general, cambie la tabla para que su ancho sea el 50% de la página y elimine la página. `Esta página <http://www.w3schools.com/css/css_table.asp>`_ le ofrece un resumen completo sobre cómo diseñar tablas.
 
 
-Matching Children
------------------
+Emparejando Hijos
+------------------
 
-When using the semantic html elements it is sometimes very desireable to match a particular tag, but only if that tag is in the article section.  CSS allows us to match tags that are descendants of other tags by using a space after the parent tag.  For example:
+Cuando se utilizan los elementos html semánticos, a veces es muy deseable hacer coincidir una etiqueta en particular, pero solo si esa etiqueta está en la sección del artículo. CSS nos permite hacer coincidir las etiquetas que son descendientes de otras etiquetas mediante el uso de un espacio después de la etiqueta principal. Por ejemplo:
 
 .. code-block:: css
 
@@ -133,7 +133,7 @@ When using the semantic html elements it is sometimes very desireable to match a
    }
 
 
-Will change the color of the h1 but only if they are descendants of the article tag.
+Cambiará el color de la h1 pero solo si son descendientes de la etiqueta del article.
 
 
 .. activecode:: css_descendant
@@ -159,4 +159,4 @@ Will change the color of the h1 but only if they are descendants of the article 
    </html>
 
 
-In the example above, both of the h1's inside the article were changed because they are both descendants of the article.  If we only wanted to change the h1 that is a direct child of the article we can replace the space with a ``>`` giving us ``article>h1`` which indicates that only the immediate child should have its style changed.
+En el ejemplo anterior, los dos h1 dentro del article se cambiaron porque ambos son descendientes del article. Si solo quisiéramos cambiar el h1 que es un hijo directo de article, podemos reemplazar el espacio con un ``>`` dándonos ``article>h1`` que indica que solo el hijo inmediato debe cambiar su estilo.
