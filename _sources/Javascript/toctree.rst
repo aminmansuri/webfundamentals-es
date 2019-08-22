@@ -15,3 +15,4 @@ Javascript
    helpObjects.rst
    exercises.rst
    finalquiz.rst
+   bandit.rst
