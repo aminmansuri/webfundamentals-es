@@ -1,9 +1,9 @@
-Advanced HTML Tags
-==================
+Etiquetas HTML avanzadas
+========================
 
 
-Unordered Lists
----------------
+Listas desordenadas
+-------------------
 
 .. activecode:: advhtml_ul
    :language: html
@@ -14,8 +14,8 @@ Unordered Lists
    </ul>
 
 
-Ordered Lists
--------------
+Listas ordenadas
+----------------
 
 .. activecode:: advhtml_ol
    :language: html
@@ -26,18 +26,18 @@ Ordered Lists
    <li>Notice that the <code>li</code> tags are used for both.
    </ol>
 
-The ``ol`` tag can also have a type attribute.  The type attribute can be one of the following values
+La etiqueta ``ol`` también puede tener un atributo de tipo. El atributo type puede ser uno de los siguientes valores
 
-* 1 This will cause the list to be numbered with numbers
-* A This will cause the list to be ordered with upper case letters
-* a This will cause the list to be ordered with lower case letters
-* I This will cause the list to be ordered with upper case roman numerals
-* i This will cause the list to be ordered with lower case roman numerals
+* 1 Esto hará que la lista se numere con números
+* A Esto hará que la lista se ordene con letras mayúsculas
+* a Esto hará que la lista se ordene con letras minúsculas
+* I Esto hará que la lista se ordene con números romanos en mayúscula
+* i Esto hará que la lista se ordene con números romanos en minúscula
 
-Try it yourself.
+Inténtalo tú mismo.
 
-Description Lists
------------------
+Descripción Listas
+--------------------
 
 .. activecode:: advhtml_dl
    :language: html
@@ -48,37 +48,37 @@ Description Lists
    <dt>dd</dt><dd>The <code>dd</code> tags are for the description</dd>
    </dl>
 
-Nesting Lists
--------------
+Listas de anidamiento
+-------------------------
 
-Lists can be inside of other lists. Too.  This is very much true of most HTML tags.
+Las listas pueden estar dentro de otras listas. También. Esto es muy cierto para la mayoría de las etiquetas HTML.
 
 .. activecode:: advhtml_nested
    :language: html
 
    <ol>
-   <li>This is an ordered list</li>
-   <li>The <code>li</code> tags come between two <code>ol</code> tags
-   <li>Notice that the <code>li</code> tags are used for both.
+   <li>Esta es una lista ordenada</li>
+   <li>Las etiquetas <code>li</code> se encuentran entre dos <code>ol</code>etiquetas
+   <li>Observe que las etiquetas <code>li</code> se usan para ambos.
    <ul>
-   <li>This is an unordered list</li>
-   <li>The <code>li</code> tags come between two <code>ul</code> tags</li>
+   <li>Esta es una lista desordenada</li>
+   <li>Las etiquetas <code>li</code> se encuentran entre dos <code>ul</code> etiquetas</li>
    </ul>
-   <li>You can mix and match lists like this as deeply as you want.</li>
+   <li>Puede mezclar y combinar listas como esta tan profundamente como desee.</li>
    </ol>
 
 
-Tables
+Tablas
 ------
 
-Tables have many uses, you can use them for organizing data as you normally would in a report where you have rows and columns of numbers or other information, but you can also use tables invisibly to influence how your page is displayed.  In the early days of html it was common to use a table to create a two column page layout.  We can still do that but now it is **much more acceptable** to use CSS for that purpose.
+Las tablas tienen muchos usos, puede usarlas para organizar datos como lo haría normalmente en un informe donde tiene filas y columnas de números u otra información, pero también puede usar tablas de forma invisible para influir en cómo se muestra su página. En los primeros días de html, era común usar una tabla para crear un diseño de página de dos columnas. Todavía podemos hacer eso, pero ahora es **mucho más aceptable** usar CSS para ese propósito.
 
-Here is a complete example that illustrates the use of the following table specific tags
+Aquí hay un ejemplo completo que ilustra el uso de las siguientes etiquetas específicas de la tabla
 
-* table  -- This is the main tag for a table
-* tr  -- every row in a table starts with a tr tag
-* td -- every column in a row is delineated by a ``td`` tag
-* th -- You can use the ``th`` tag in place of the ``td`` tag in the first row to make headings
+* table  -- esta es la etiqueta principal para una tabla
+* tr  -- cada fila de una tabla comienza con una etiqueta tr
+* td -- cada columna de una fila está delineada por una etiqueta ``td``
+* th -- Puede usar la etiqueta ``th`` en lugar de la etiqueta ``td`` en la primera fila para hacer encabezados
 
 
 .. activecode:: advhtml_table
@@ -118,31 +118,31 @@ Here is a complete example that illustrates the use of the following table speci
     </tr>
     </table>
 
-There are many attributes you can use with the various table tags.
+Hay muchos atributos que puede usar con las diversas etiquetas de tabla.
 
 * ``table``
-  * width - you can specify a width as a percentage or as a number of pixels.  This attribute is useful for right now, but its use is not encouraged, as you are better off to use CSS to control the look of your table.  We say that this attribute is **deprecated**
-  * border - you can add borders to your tables as in the example above, but this tag is deprecated as well.
-  * The spacing between the cells of the table.  Also deprecated.
+  * width - puede especificar un ancho como porcentaje o como número de píxeles. Este atributo es útil en este momento, pero no se recomienda su uso, ya que es mejor usar CSS para controlar el aspecto de su tabla. Decimos que este atributo está **en desuso**
+  * border - puede agregar bordes a sus tablas como en el ejemplo anterior, pero esta etiqueta también está en desuso.
+  * El espacio entre las celdas de la tabla. También en desuso.
 
 * ``td``
-  * colspan  -- if you have a particular table where you need an extra wide column in some rows you can make a cell of your table span more than one column using the colspan attribute.  Its value is the number of columns.
+  * colspan  -- si tiene una tabla en particular donde necesita una columna extra ancha en algunas filas, puede hacer que una celda de su tabla abarque más de una columna usando el atributo colspan. Su valor es el número de columnas.
 
 * ``tr``
-  * rowspan -- If you have a particular table where you need an column to span multiple rows you can make a cell of your table span more than one row using the rowspan attribute.  Its value is the number of rows.
+  * rowspan -- si tiene una tabla en particular donde necesita una columna para abarcar varias filas, puede hacer que una celda de su tabla abarque más de una fila utilizando el atributo rowspan. Su valor es el número de filas.
 
 
-Experiment with a table.  What kinds of tags can you include inside each ``td``?  Can you make a table inside another table?
+Experimenta con table. ¿Qué tipo de etiquetas puedes incluir dentro de cada ``td``? ¿Puedes hacer una table de otro table?
 
-.. Exercise make a two column table with a list in each column
+.. Ejercicio haga una tabla de dos columnas con una lista en cada columna
 
-.. Exercise make a table that looks like Name | name then two rows called Telephone with two columns after cell and number followed on the next line by office and the number.  this will combine rowspan and colspan in one project.
+.. Ejercicio hacer una tabla que se parece a Nombre | nombre luego dos filas llamadas Teléfono con dos columnas después de la celda y el número seguidos en la siguiente línea por oficina y el número. esto combinará rowpan y colspan en un proyecto.
 
 
 Audio
 -----
 
-Embedding audio in your webpage allows you to link to various files containing music or speech.  The audio tag looks like the following:
+Incrustar audio en su página web le permite vincular a varios archivos que contienen música o voz. La etiqueta de audio tiene el siguiente aspecto:
 
 .. code-block:: html
 
@@ -152,12 +152,12 @@ Embedding audio in your webpage allows you to link to various files containing m
         Your browser does not support the audio element.
     </audio>
 
-The ``controls`` attribute provides start/stop/fast-forward/rewind buttons for the listener.  The ``source`` tags inside the ``audio`` tag allow you to provide several different audio formats.  This is because different browsers support different kinds of audio The browser will go through the list, in order, until it finds a format it understands, or else, it will replace the controller with the message at the end.
+El atributo ``controls`` proporciona botones de inicio/parada/avance rápido/rebobinado para el oyente. Las etiquetas ``source`` dentro de la etiqueta ``audio`` le permiten proporcionar varios formatos de audio diferentes. Esto se debe a que diferentes navegadores admiten diferentes tipos de audio. El navegador recorrerá la lista, en orden, hasta que encuentre un formato que comprenda, o de lo contrario, reemplazará el controlador con el mensaje al final.
 
 Video
 -----
 
-Embedding video in your webpage allows you to link to various files containing movies.
+Incrustar un video en su página web le permite vincular a varios archivos que contienen películas.
 
 .. code-block:: html
 
@@ -167,11 +167,11 @@ Embedding video in your webpage allows you to link to various files containing m
         Your browser does not support the video element.
     </video>
 
-The ``controls`` attribute provides start/stop/fast-forward/rewind buttons for the listener.  The ``source`` tags inside the ``video`` tag allow you to provide several different video formats.  This is because different browsers support different kinds of video The browser will go through the list, in order, until it finds a format it understands, or else, it will replace the controller with the message at the end.
+El atributo ``controls`` proporciona botones de inicio/parada/avance rápido/rebobinado para el oyente. Las etiquetas ``source`` dentro de la etiqueta ``video`` le permiten proporcionar varios formatos de video diferentes. Esto se debe a que diferentes navegadores admiten diferentes tipos de video. El navegador recorrerá la lista, en orden, hasta que encuentre un formato que comprenda, o de lo contrario, reemplazará el controlador con el mensaje al final.
 
 
 
 IFrames
 -------
 
-IFrames allow you to embed a webpage within another webpage.  The activecode examples in this book use an iframe to allow you to experiment with the html, by creating a page within a page.
+IFrames le permite incrustar una página web dentro de otra página web. Los ejemplos de código activo en este libro usan un iframe para permitirle experimentar con el html, creando una página dentro de una página.

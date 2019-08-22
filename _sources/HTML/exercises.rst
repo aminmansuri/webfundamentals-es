@@ -1,75 +1,75 @@
-Exercises
-=========
+Ejercicios
+===========
 
 
 
-1. Make a little webpage to tell me a little about yourself.  Use at least three levels of headings and some paragraphs.
+1. Haga una pequeña página web para contarme un poco sobre ti. Usa al menos tres niveles de encabezados y algunos párrafos.
 
 .. actex:: ex_html_1
    :language: html
    :nocodelens:
 
-2.  You can copy the URL of almost any image in a browser by right clicking on the image and choosing "copy image URL"  or something similar.  Write an html page in the activecode window for this exercise that includes a header element giving a title to some image you find,  Then include the image in the page, sized appropriately,  and a paragraph that describes the image.
+2.  Puedes copiar la URL de casi cualquier imagen en un navegador haciendo clic derecho sobre la imagen y eligiendo "copiar URL de imagen" o algo similar. Escriba una página html en la ventana de código activo para este ejercicio que incluya un elemento de encabezado que dé un título a alguna imagen que encuentre, luego incluya la imagen en la página, con el tamaño apropiado, y un párrafo que describa la imagen.
 
 .. actex:: ex_html_2
    :language: html
    :nocodelens:
 
-3.  Make an outline that has capital roman numerals at the highest level of the outline.  and lower case roman numerals for the second level items.  List three new concepts we have covered in this class at the first level, and for each of those list two or three key points.
+3.  Haz un esquema que tenga números romanos en mayúscula en el nivel más alto del esquema y números romanos en minúscula para los elementos de segundo nivel. Enumerantres conceptos nuevos que hemos cubierto en esta clase en el primer nivel, y para cada uno de ellos enumera dos o tres puntos clave.
 
 .. actex:: ex_html_3
    :language: html
    :nocodelens:
 
 
-4.  Make a webpage that uses a table to create two columns.  In the left column should be a bulleted list of 5 html tags you have learned about.  In the right column should be a numbered list of 5 attributes of html tags you have learned about.
+4.  Crea una página web que use una tabla para crear dos columnas. En la columna de la izquierda debe haber una lista con viñetas de 5 etiquetas html que has aprendido. En la columna de la derecha debe haber una lista numerada de 5 atributos de las etiquetas html que has aprendido.
 
 .. actex:: ex_html_4
    :language: html
    :nocodelens:
 
 
-5. Make a table that looks like this:
+5. Haz una tabla que se vea así:
 
   .. image:: Figures/challengetable.png
 
-  Hint, this is going to require both rowspan and columnspan.  Also, Do not try to do this all at once.  Start with the header, then move on to the rest of the table, working in small parts
+  Sugerencia, esto va a requerir tanto en filas como en columnas. Además, no intentes hacer todo esto de una vez. Comienza con el encabezado, luego continúa con el resto de la tabla, trabajando en partes pequeñas
 
 .. actex:: ex_html_5
    :language: html
    :nocodelens:
 
-6. Make a webpage that links to four of your favorite websites.
+6. Haga una página web que enlace a cuatro de sus sitios web favoritos.
 
 .. actex:: ex_html_6
    :language: html
    :nocodelens:
 
-7. Make a webpage with a link at the bottom that when clicked will jump you all the way to the top of the page.
+7. Crea una página web con un enlace en la parte inferior que, cuando hagas clic, te lleve a la parte superior de la página.
 
 .. actex:: ex_html_7
    :language: html
    :nocodelens:
 
-8. Make a webpage with a link at the top of it that when clicked will jump all the way to the bottom of the page. At the bottom of the page there should be a link to jump back to the top of the page.
+8. Haga una página web con un enlace en la parte superior que, al hacer clic, salte hasta el final de la página. En la parte inferior de la página debe haber un enlace para volver a la parte superior de la página.
 
 .. actex:: ex_html_8
    :language: html
    :nocodelens:
 
-9. Make a webpage with an image that has a border of size 2, a width of 200, and a height of 200.
+9. Cree una página web con una imagen que tenga un borde de tamaño 2, un ancho de 200 y una altura de 200.
 
 .. actex:: ex_html_9
    :language: html
    :nocodelens:
 
-10.  Make a webpage with five different images. Skip two lines between each image. Each image should have a title.
+10.  Haz una página web con cinco imágenes diferentes. Salta dos líneas entre cada imagen. Cada imagen debe tener un título.
 
 .. actex:: ex_html_10
    :language: html
    :nocodelens:
 
-11.  Make a webpage with an image that when clicked will link to a search engine of your choice
+11.  Haga una página web con una imagen que al hacer clic se vinculará con un motor de búsqueda de su elección
 
 .. actex:: ex_html_11
    :language: html

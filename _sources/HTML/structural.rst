@@ -1,9 +1,9 @@
-Semantic HTML Tags
-==================
+Etiquetas HTML semánticas
+===========================
 
-Some tags in HTML are designed for you to use in creating a logical structure for your page.  As you have probably noticed many sites have a navigation bar in the header, and have some information about the page in a footer.  Many web pages have sidebars, and of course blogs and many news sites are divided into articles.  Scholarly web sites are divided into parts and sections.
+Algunas etiquetas en HTML están diseñadas para que las use al crear una estructura lógica para su página. Como probablemente hayas notado, muchos sitios tienen una barra de navegación en el encabezado y tienen información sobre la página en un pie de página. Muchas páginas web tienen barras laterales y, por supuesto, los blogs y muchos sitios de noticias están divididos en artículos. Los sitios web académicos se dividen en partes y secciones.
 
-You have probably also noticed that it is pretty easy to tell the different parts of a web page apart because they have a distinct look to them.  In order to give different sections different looks we need to provide some structure within our markup.   This is done by using structural tags as follows:
+Probablemente también hayas notado que es bastante fácil distinguir las diferentes partes de una página web porque tienen un aspecto distinto. Para dar a diferentes secciones diferentes miradas, necesitamos proporcionar alguna estructura dentro de nuestro marcado. Esto se realiza mediante el uso de etiquetas estructurales de la siguiente manera:
 
 
 * article
@@ -20,13 +20,13 @@ You have probably also noticed that it is pretty easy to tell the different part
 * summary
 * time
 
-These tags are all block level tags, but other than that they have no impact on how the page looks without the use of CSS!  Figure 1 illustrates how many of these tags are used to create structure in a page.
+¡Estas etiquetas son todas etiquetas de nivel de bloque, pero aparte de eso, no tienen impacto en el aspecto de la página sin el uso de CSS! La Figura 1 ilustra cuántas de estas etiquetas se usan para crear estructura en una página.
 
 .. figure:: Figures/img_sem_elements.gif
 
-   Figure used in accordance with the educational fair use policy of w3schools.com
+   Figura utilizada de acuerdo con la política educativa de uso justo de w3schools.com
 
-Lets look at an example that uses some of these tags:
+Veamos un ejemplo que usa algunas de estas etiquetas:
 
 .. activecode:: sem_tags
    :language: html
@@ -34,26 +34,26 @@ Lets look at an example that uses some of these tags:
    <html>
    <body>
    <header>
-   <p>This is text in the header</p>
+   <p>Este es el texto en el encabezado</p>
    </header>
    <aside>
-   <p>This is a side comment</p>
+   <p>Este es un comentario secundario</p>
    </aside>
    <article>
-   <p>This is some text for an article</p>
+   <p>Este es un texto para un artículo.</p>
    </article>
-   <p>Notice that there is nothing special about the location of any of this text.  Without CSS the semantic tags simply divide the document logically</p>
+   <p>Tenga en cuenta que no hay nada especial sobre la ubicación de ninguno de estos textos. Sin CSS, las etiquetas semánticas simplemente dividen el documento lógicamente</p>
    </body>
    </html>
 
 
-.. admonition:: Historical Note
+.. admonition:: Nota histórica
 
-   All of the tags mentioned above were added to the HTML5 standard.  Before HTML5 there were only two of these invisible structural tags.  You will see many examples of the use of these tags:
+    Todas las etiquetas mencionadas anteriormente se agregaron al estándar HTML5. Antes de HTML5 solo había dos de estas etiquetas estructurales invisibles. Verá muchos ejemplos del uso de estas etiquetas:
    
    * div
    * span
    
-   These tags served the same purpose, usually by using an id or class attribute to indicate their semantic purpose.
+   Estas etiquetas sirvieron para el mismo propósito, generalmente mediante el uso de un atributo de identificación o clase para indicar su propósito semántico.
    
    

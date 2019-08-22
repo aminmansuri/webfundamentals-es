@@ -1,8 +1,8 @@
-HTML Quiz
-=========
+Prueba HTML
+=============
 
-Do NOT click on the start button until you are ready to take this quiz.  (probably during class)  Once you open the
-quiz you are committed to finishing it.  The quiz has a time limit of 20 minutes.
+NO haga clic en el botón de inicio hasta que esté listo para tomar esta prueba. (probablemente durante la clase) Una vez que abras el
+cuestionario estás comprometido a terminarlo. El cuestionario tiene un límite de tiempo de 20 minutos.
 
 .. timed:: html_final_timed
    :timelimit: 30
@@ -17,7 +17,7 @@ quiz you are committed to finishing it.  The quiz has a time limit of 20 minutes
       :feedback_c: None
       :feedback_d: None
 
-      What does HTML stand for?
+      ¿Qué significa HTML?
 
    .. mchoice:: html_quiz_q2
       :correct: d
@@ -30,7 +30,7 @@ quiz you are committed to finishing it.  The quiz has a time limit of 20 minutes
       :feedback_c: None
       :feedback_d: None
 
-      Choose the correct HTML element for the largest heading:
+      Elija el elemento HTML correcto para el encabezado más grande:
 
    .. mchoice:: html_quiz_q3
       :correct: a
@@ -41,7 +41,7 @@ quiz you are committed to finishing it.  The quiz has a time limit of 20 minutes
       :feedback_b: None
       :feedback_c: None
 
-      What is the correct HTML element for inserting a line break?
+      ¿Cuál es el elemento HTML correcto para insertar un salto de línea?
 
    .. mchoice:: html_quiz_q4
       :correct: b
@@ -54,7 +54,7 @@ quiz you are committed to finishing it.  The quiz has a time limit of 20 minutes
       :feedback_c: None
       :feedback_d: None
 
-      What is the correct HTML for creating a hyperlink?
+      ¿Cuál es el HTML correcto para crear un hipervínculo?
 
    .. mchoice:: html_quiz_q5
       :correct: b
@@ -67,7 +67,7 @@ quiz you are committed to finishing it.  The quiz has a time limit of 20 minutes
       :feedback_c: None
       :feedback_d: None
 
-      Which character is used to indicate an end tag?
+      ¿Qué caracter se usa para indicar una etiqueta final?
 
 
    .. mchoice:: html_quiz_q6
@@ -81,7 +81,7 @@ quiz you are committed to finishing it.  The quiz has a time limit of 20 minutes
       :feedback_c: None
       :feedback_d: None
 
-      Which of these elements are all &lt;table&gt; elements?
+      ¿Cuál de estos elementos son todos &lt;table&gt; elementos?
 
 
    .. mchoice:: html_quiz_q7
@@ -91,7 +91,7 @@ quiz you are committed to finishing it.  The quiz has a time limit of 20 minutes
       :feedback_a: None
       :feedback_b: None
 
-      Inline elements are normally displayed without starting a new line.
+      Los elementos Inline normalmente se muestran sin comenzar una nueva línea.
 
    .. mchoice:: html_quiz_q8
       :correct:  d
@@ -104,7 +104,7 @@ quiz you are committed to finishing it.  The quiz has a time limit of 20 minutes
       :feedback_c: None
       :feedback_d: None
 
-      How can you make a numbered list?
+      ¿Cómo puedes hacer una lista numerada?
 
    .. mchoice:: html_quiz_q9
       :correct: c
@@ -117,7 +117,7 @@ quiz you are committed to finishing it.  The quiz has a time limit of 20 minutes
       :feedback_c: None
       :feedback_d: None
 
-      What is the correct HTML for inserting an image?
+      ¿Cuál es el HTML correcto para insertar una imagen?
 
    .. mchoice:: html_quiz_q10
       :correct: a
@@ -126,7 +126,7 @@ quiz you are committed to finishing it.  The quiz has a time limit of 20 minutes
       :feedback_a: None
       :feedback_b: None
 
-      Block elements are normally displayed without starting a new line.
+      Los elementos de bloque normalmente se muestran sin comenzar una nueva línea.
 
    .. mchoice:: html_quiz_q11
       :correct: c
@@ -139,7 +139,7 @@ quiz you are committed to finishing it.  The quiz has a time limit of 20 minutes
       :feedback_c: None
       :feedback_d: None
 
-      Which HTML element defines the title of a document?
+      ¿Qué elemento HTML define el título de un documento?
 
 
-Once you have completed the quiz you can review your answers but you will not be able to change them.
+Una vez que haya completado el cuestionario, puede revisar sus respuestas, pero no podrá cambiarlas.

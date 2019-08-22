@@ -1,10 +1,10 @@
-Basic HTML Tags
-===============
+Etiquetas HTML básicas
+=========================
 
-Headings
---------
+Encabezados
+-------------
 
-Like any document HTML documents may have several layers of headings.  In fact you can have heading levels from 1 to 6 in an HTML document.
+Como cualquier documento, los documentos HTML pueden tener varias capas de encabezados. De hecho, puede tener niveles de encabezado del 1 al 6 en un documento HTML.
 
 .. activecode:: html_headings
    :language: html
@@ -14,21 +14,21 @@ Like any document HTML documents may have several layers of headings.  In fact y
    <h3>Level three</h3>
 
 
-Now modify the example above to add the next three levels of headings.  What do you notice?  What happens if you add a level 7 heading?   What happens if you close an h2 tag with an h1 or an h3?
+Ahora modifica el ejemplo anterior para agregar los siguientes tres niveles de encabezados. ¿Que notaste? ¿Qué sucede si agrega un título de nivel 7? ¿Qué sucede si cierra una etiqueta h2 con un h1 o un h3?
 
 .. reveal:: reveal_heading
 
-   As you might expect, the headings continue to get smaller as you go from 1 to 6.  But when you go to level 7 the text gets bigger.  This is because the web browser is written so that it just ignores any tags that it does not know about.  This is somewhat of a disadvantage as you don't get any error messages, things just look wrong, and you have to figure out why.
+   Como es de esperar, los títulos continúan disminuyendo a medida que avanza del 1 al 6. Pero cuando pasa al nivel 7, el texto se hace más grande. Esto se debe a que el navegador web está escrito de modo que simplemente ignora cualquier etiqueta que no conozca. Esto es una desventaja, ya que no recibe ningún mensaje de error, las cosas simplemente se ven mal y tiene que descubrir por qué.
 
 
 
-Another aspect of the heading tag is that it is what we call a **block** tag.  Notice that each heading appears on its own line.  Thats pretty much what we would expect for a heading.  But not necessarily for other tags.  shortly, we will see some **inline** tags that do not each appear on their own line.
+Otro aspecto de la etiqueta de encabezado es que es lo que llamamos una etiqueta **block**. Observe que cada encabezado aparece en su propia línea. Eso es más o menos lo que esperaríamos para un encabezado. Pero no necesariamente para otras etiquetas. En breve, veremos algunas etiquetas **en línea** que no aparecen en su propia línea.
 
 
-Paragraphs
-----------
+Los párrafos
+-------------
 
-Paragraphs are another funamental element of documents.  Paragraphs are also another example of a block element in that each paragraph gets its own space and is separated from other html elements by blank lines in the document.
+Los párrafos son otro elemento fundamental de los documentos. Los párrafos también son otro ejemplo de un elemento de bloque en el que cada párrafo tiene su propio espacio y está separado de otros elementos html por líneas en blanco en el documento.
 
 
 .. activecode:: html_paragraph
@@ -39,13 +39,13 @@ Paragraphs are another funamental element of documents.  Paragraphs are also ano
    <p>Level this is a short sentence</p>
 
 
-What happens when you put a paragraph inside another paragraph?  What about a header inside a paragraph?
+¿Qué sucede cuando pones un párrafo dentro de otro párrafo? ¿Qué pasa con un encabezado dentro de un párrafo?
 
 
-Images
-------
+Imágenes
+----------
 
-Images are another common element of a document or a web page.  To include an image in a document you must use an ``img`` tag.  Image tags are an example of an **inline** element because they just flow in with the surrounding text.  They do not force a new block to be created in the rendering of the html.  Here are a couple of images:
+Las imágenes son otro elemento común de un documento o una página web. Para incluir una imagen en un documento, debe usar una etiqueta ``img``. Las etiquetas de imagen son un ejemplo de un elemento **en línea** porque simplemente fluyen con el texto circundante. No obligan a crear un nuevo bloque en la representación del html. Aquí hay un par de imágenes:
 
 .. figure:: Figures/LutherBellPic.jpg
 
@@ -56,48 +56,48 @@ Images are another common element of a document or a web page.  To include an im
    Norse Logo:  ``http://interactivepython.org/runestone/static/webfundamentals/_images/norse-logo.png``
 
 
-The image tag has a new component to it called an attribute.  In general tags can have many attributes in the case of an image we can inlude it by using a ``src`` attribute that contains the URL to the image we want to embed.  We can embed any image on the internet in our own document by referring to it by its URL in the ``src`` attribute.
+La etiqueta de imagen tiene un nuevo componente llamado atributo. En general, las etiquetas pueden tener muchos atributos en el caso de una imagen, podemos incluirla utilizando un atributo ``src`` que contiene la URL de la imagen que queremos incrustar. Podemos incrustar cualquier imagen en Internet en nuestro propio documento al referirnos a él por su URL en el atributo ``src``.
 
 .. activecode:: html_img
    :language: html
 
-   <h1>Embedded Images</h1>
-   <p>Images are inline elements they fit in the flow
+   <h1>Imágenes incrustadas</h1>
+   <p>Las imágenes son elementos en línea que encajan en el flujo
    <img src="http://interactivepython.org/runestone/static/webfundamentals/_images/LutherBellPic.jpg">
-   of a paragraph without causing extra line breaks.</p>
+   de un párrafo sin causar saltos de línea adicionales.</p>
 
 
-Try modifying the example above so that it includes the norse logo rather than the bell.
-You can also change the height and width of  an image by using a ``height=`` attribute or a ``width=`` attribute.  Try changing the size of the image in the example above.  Notice what it does to the flow.  Try changing just one of height or width and then try changing both at the same time.  You can stretch your image in all kinds of crazy ways.
+Intenta modificar el ejemplo anterior para que incluya el logotipo nórdico en lugar de la campana.
+También puedes cambiar el alto y el ancho de una imagen utilizando un atributo ``height=`` o un atributo ``width=``. Intenta cambiar el tamaño de la imagen en el ejemplo anterior. Observa lo que le hace al flujo. Intenta cambiar solo uno de alto o ancho y luego intenta cambiar ambos al mismo tiempo. Puedes estirar tu imagen, hacer de todo tipo de locuras.
 
-There are several other attributes of the image tag as well.  You can read about them `here <http://www.w3schools.com/tags/tag_img.asp>`_.
+También hay varios otros atributos de la etiqueta de imagen. Puede leer sobre ellos `here <http://www.w3schools.com/tags/tag_img.asp>`_.
 
 
 Links
 -----
 
-The last basic link to cover in this section is the link tag ``a``.  In fact the last sentence of the previous section used a link to send you to the w3schools website to learn more about the attributes of an ``img`` tag.  Links are what made the web so popular in the first place.  Today we call them links, but in earlier years they were usually referred to as Hyperlinks. You can provide a link to any URL on the web using the ``href`` attribute on the ``a`` tag.   The text that you will click on goes between the opening ``a`` tag and the closing ``a`` tag.
+El último enlace básico para cubrir en esta sección es la etiqueta de enlace ``a``. De hecho, la última oración de la sección anterior utilizaba un enlace para enviarlo al sitio web de w3schools para obtener más información sobre los atributos de una etiqueta ``img``. Los enlaces son lo que hizo que la web fuera tan popular en primer lugar. Hoy los llamamos enlaces, pero en años anteriores generalmente se los denominaba hipervínculos. Puede proporcionar un enlace a cualquier URL en la web utilizando el atributo ``href`` en la etiqueta ``a``. El texto en el que hará clic va entre la etiqueta de apertura ``a`` y la etiqueta de cierre ``a``.
 
 
 .. activecode:: html_link
    :language: html
 
-   <h1>Links make the web!</h1>
-   <p>Links are another inline element.  You can read about links and their attributes
-   <a href="http://www.w3schools.com/tags/tag_a.asp">Here</a> on the w3schools website.</p>
+   <h1>Los enlaces hacen la web!</h1>
+   <p>Los enlaces son otro elemento en línea. Puedes leer sobre enlaces y sus atributos
+   <a href="http://www.w3schools.com/tags/tag_a.asp">aquí</a> en el sitio web de w3schools</p>
 
 
-Try clicking on the link in the example above.  What happens?  How do you get back?   Don't worry, you can always just reload this page.
+Intenta hacer clic en el enlace del ejemplo anterior. ¿Lo que pasa? ¿Cómo vuelves? No te preocupes, siempre puedes volver a cargar esta página.
 
-Links can also be used to navigate within the same page.  to do this you use one ``a`` tag to create
-an anchor point on the page using the name attribute like this:  ``<a name="target">I am a target</a>``  You can create
-a link that will jump to the target anywhere else on the page using ``<a href="#target">Go to Target</a>``
+Los enlaces también se pueden usar para navegar dentro de la misma página, para hacer esto, usa una etiqueta ``a`` para crear
+un punto de anclaje en la página usando el atributo de nombre como este:  ``<a name="target">Soy un objetivo</a>`` Puede crear
+un enlace que saltará al objetivo en cualquier otro lugar de la página usando ``<a href="#target">Ir al objetivo</a>``
 
 
-Simple Text Formatting
-----------------------
+Formato de texto simple
+--------------------------
 
-Making text bold or italic and other formatting is easy in HTML as well.  The following example illustrates the basic text formatting tags.
+Hacer texto en negrita o cursiva y otros formatos también es fácil en HTML. El siguiente ejemplo ilustra las etiquetas básicas de formato de texto.
 
 .. activecode:: html_fmt
    :language: html
@@ -105,25 +105,25 @@ Making text bold or italic and other formatting is easy in HTML as well.  The fo
    <html>
    <body>
 
-   <p><b>This text is bold</b></p>
-   <p><strong>This text is strong</strong></p>
-   <p><i>This text is italic</i></p>
-   <p><em>This text is emphasized</em></p>
-   <p><code>This is computer output</code></p>
-   <p>This is<sub> subscript</sub> and <sup>superscript</sup></p>
-   <p>This <br /> forces <br /> a <br /> line break </p>
+   <p><b>Este texto está en negrita</b></p>
+   <p><strong>Este texto es fuerte</strong></p>
+   <p><i>Este texto está en cursiva</i></p>
+   <p><em>Este texto es enfatizado</em></p>
+   <p><code>Esta es la salida de la computadora</code></p>
+   <p>Este es<sub> subíndice</sub> y <sup>superíndice</sup></p>
+   <p>Esto <br /> fuerza <br /> un <br /> salto de línea </p>
    </body>
    </html>
 
-You can mix and match these styles in all kinds of ways.  Try making a superscript inside a superscript.  Try making the subscript bold or italic.
+Puedes mezclar y combinar estos estilos en todo tipo de formas. Intenta hacer un superíndice dentro de un superíndice. Intenta poner el subíndice en negrita o cursiva.
 
 
-**Check your Understanding**
+**Revisa tu entendimiendo**
 
 .. clickablearea:: blockelem
-   :question: Click on the beginning tag for all block elements in the example.
+   :question: Haga clic en la etiqueta de inicio para todos los elementos de bloque en el ejemplo.
    :iscode:
-   :feedback: Block elements start on a new line and take up the full width available.
+   :feedback: Los elementos de bloque comienzan en una nueva línea y ocupan todo el ancho disponible.
 
    &lt;html&gt;
    :click-incorrect:&lt;body&gt;:endclick:
@@ -138,9 +138,9 @@ You can mix and match these styles in all kinds of ways.  Try making a superscri
 
 
 .. clickablearea:: inlineelem
-   :question: Click on the beginning tag for all inline elements in the example.
+   :question: Haga clic en la etiqueta de inicio para todos los elementos en línea en el ejemplo.
    :iscode:
-   :feedback: Inline elements do not start on a new line and only take as much width as needed.
+   :feedback: Los elementos en línea no comienzan en una nueva línea y solo toman el ancho que sea necesario.
 
     &lt;html&gt;
     &lt;body&gt;

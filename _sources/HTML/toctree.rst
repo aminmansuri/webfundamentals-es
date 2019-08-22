@@ -1,5 +1,5 @@
-HTML Basics
-:::::::::::
+Conceptos básicos de HTML
+:::::::::::::::::::::::::
 
 .. toctree::
    :maxdepth: 2
