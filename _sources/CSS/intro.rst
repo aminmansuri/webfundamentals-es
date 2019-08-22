@@ -13,8 +13,8 @@ Para informarle a la computadora sobre estas reglas if/then, necesitamos una sin
 .. code-block:: css
 
    selector {
-       declaration;
-       declaration;
+       declaración;
+       declaración;
        }
 
 La declaración en sí consta de dos partes: una propiedad y un valor. Hay muchísimas propiedades en CSS y veremos muchas de ellas, pero por ahora, solo piense en la propiedad como algo así como color, tamaño de fuente, familia de fuentes, etc.
