@@ -1,8 +1,8 @@
-Objects Attributes and Methods
+Objetos Atributos y Métodos
 ==============================
 
 
-In the previous section we had the following example:
+En la sección anterior tuvimos el siguiente ejemplo:
 
 .. activecode:: js_hello2
    :language: html
@@ -21,30 +21,30 @@ In the previous section we had the following example:
    </html>
    
    
-If you think about the HTML only, and what kind of tree you get from the document you will get something like this:
+Si solo piensa en el HTML, y qué tipo de árbol obtiene del documento, obtendrá algo como esto:
 
 .. image:: Figures/simpledom.svg
 
 
-In the previous example we have a name ``document`` as you may have guessed this document name refers to the entire HTML document (or page).  More technically, document is a name that refers to an **object**.  That object is the representation of the page.
+En el ejemplo anterior tenemos un nombre ``document``, ya que puede haber adivinado que este nombre de documento se refiere a todo el documento HTML (o página). Más técnicamente, documento es un nombre que se refiere a un **objeto**. Ese objeto es la representación de la página.
 
-Earlier we said that objects know things, and know how to do things, the terminology for the things that objects know is that objects have **attributes** attributes on objects serve the same purpose as attributes of tags, they contain some property of the object.   For example ``document.height`` tells us how many pixels high the entire page is.  Our example illustrates several other attributes:
+Anteriormente dijimos que los objetos saben cosas y saben cómo hacer las cosas, la terminología de las cosas que los objetos saben es que los objetos tienen **atributos** atributos en los objetos tienen el mismo propósito que los atributos de las etiquetas, contienen alguna propiedad de objeto. Por ejemplo, ``document.height`` nos dice cuántos píxeles de altura tiene toda la página. Nuestro ejemplo ilustra varios otros atributos:
 
 * document.body
 * document.body.style
-* or more specifically document.body.style.backgroundColor  (and the others you probably discovered)
+* o más específicamente document.body.style.backgroundColor   (y los otros que probablemente descubriste)
 * document.body.innerHTML
 
-We can use these attributes in two ways.  First, we can use attributes to ask the object a question.  For example  ``document.body.style.backgroudColor`` could be interpreted as asking the document "tell me your background color". 
-On the other hand  ``document.body.style.backgroundColor = "lightblue"`` should be interpreted as "set your background color to lightblue".
+Podemos usar estos atributos de dos maneras. Primero, podemos usar atributos para hacer una pregunta al objeto. Por ejemplo, ``document.body.style.backgroudColor`` podría interpretarse como preguntando al documento "dime tu color de fondo".
+Por otro lado, ``document.body.style.backgroundColor = "lightblue"`` debe interpretarse como "establecer el color de fondo en azul claro".
 
-The key difference between the two interpretations in the preceeding paragraph is where the attribute is used in relationship to the equal sign. In fact the statement ``document.body.style.backgroundColor = "lightblue"`` is a special and very common programming statement called an **assignment statement**.
+La diferencia clave entre las dos interpretaciones en el párrafo anterior es donde se utiliza el atributo en relación con el signo igual. De hecho, la declaración ``document.body.style.backgroundColor = "lightblue"`` es una declaración de programación especial y muy común llamada **declaración de asignación**.
 
-Now, you may also be wondering about the ``.`` between the various attributes in the statement.  You should read the dots between the attributes as:  document object (dot) return your body object (dot) return your style object (dot) return your backgroundColor object.
+Ahora, también puede estar preguntándose sobre el ``.`` entre los diversos atributos en la declaración. Debe leer los puntos entre los atributos como: objeto de documento (punto) devuelve su objeto de cuerpo (punto) devuelve su objeto de estilo (punto) devuelve su objeto backgroundColor.
 
-The innerHTML attribute allows us to change the html of any element in our document.  Of course as you noticed before changing the HTML value of the body wipes out all of the old tags and replaces it with whatever is in quotes.  Lets look at another example that illustrates another very important javascript function and will allow us to change only a small portion of the webpage.
+El atributo innerHTML nos permite cambiar el html de cualquier elemento en nuestro documento. Por supuesto, como notó antes de cambiar el valor HTML del cuerpo, borra todas las etiquetas antiguas y las reemplaza por lo que está entre comillas. Veamos otro ejemplo que ilustra otra función de JavaScript muy importante y nos permitirá cambiar solo una pequeña parte de la página web.
 
-Our goal is to change the ``h1`` without changing the rest of the page.  Lets try an approach that might seem clear to you now, that **will not work.**
+Nuestro objetivo es cambiar el ``h1`` sin cambiar el resto de la página. Probemos un enfoque que pueda parecerle claro ahora, que **no funcionará**
 
 .. activecode:: js_hello3
    :language: html
@@ -62,9 +62,9 @@ Our goal is to change the ``h1`` without changing the rest of the page.  Lets tr
       </body>
    </html>
 
-The reason this will not work is that the body may contain many ``h1`` tags.  So we need a way to identify, and "get a handle on" the exact h1 that we want to change.
+La razón por la que esto no funcionará es porque el cuerpo puede contener muchas etiquetas ``h1``. Por lo tanto, necesitamos una forma de identificar y "controlar" el h1 exacto que queremos cambiar.
 
-Lets look at the right way to do this.  IN the following example we have a semantic tag called ``main`` we want to change the contents of main without modifying the rest of the document.
+Veamos la forma correcta de hacer esto. En el siguiente ejemplo tenemos una etiqueta semántica llamada ``main``, queremos cambiar el contenido de main sin modificar el resto del documento.
 
 .. activecode:: js_selector
    :language: html
@@ -92,19 +92,19 @@ Lets look at the right way to do this.  IN the following example we have a seman
    </html>
 
 
-Our function has grown!  But, don't let that worry you, we have added more assginment statemetnts that only change the ``main`` tag.  However we have introduced one very significant new programming feature into this example.  ``myMain`` is a **variable**.  Variables are names that we give to Javascript objects, in this case it is the ``main`` tag.  Now, given what you know so far, you might wonder why not just use ``document.body.main``?  Because it does not exist.  The document object has a ``body`` attribute because all documents have a ``body``, but not all documents have a ``main``.  
+¡Nuestra función ha crecido! Pero no dejes que eso te preocupe, hemos agregado más elementos de asignación que solo cambian la etiqueta ``main``. Sin embargo, hemos introducido una nueva característica de programación muy importante en este ejemplo.  ``myMain`` es una **variable**. Las variables son nombres que le damos a los objetos Javascript, en este caso es la etiqueta ``main``. Ahora, dado lo que sabe hasta ahora, puede preguntarse por qué no solo usar ``document.body.main``. Porque no existe El objeto de documento tiene un atributo ``body`` porque todos los documentos tienen un ``body``, pero no todos los documentos tienen un ``main``.
 
-So, we need to find the main in our document and give it a name so we can do things with it.  This is what is going on in the statement:  ``myMain = document.querySelector('main');``  Assignment statements work as follows:
+Por lo tanto, necesitamos encontrar el principal en nuestro documento y darle un nombre para que podamos hacer cosas con él. Esto es lo que está sucediendo en la declaración: ``myMain = document.querySelector('main');`` Las declaraciones de asignación funcionan de la siguiente manera:
 
-1.  evaluate whatever is to the right side of the ``=`` assignment operator.
-2.  Make the name on the left hand side of the assignment refer to the result of 1.
+1. evalúe lo que esté al lado derecho del operador de asignación ``=``.
+2. Haga que el nombre en el lado izquierdo de la tarea se refiera al resultado de 1.
 
-Now, the right hand side of the assignment statement contains a **method**. This is a fancy word for us telling an object to go do something for us.  In fact a method is just a fancy name for a function that is attached to an object, and so it is an abstraction too.  Now, here is the good news about this method.  Everything you learned about selectors in the previous chapter on CSS can be used to tell this method what you want it to find!   ``'main'`` is a parameter to the querySelector method, and could contain any selector we learned about in the previous chapter.
+Ahora, el lado derecho de la instrucción de asignación contiene un **método**. Esta es una palabra elegante para nosotros diciéndole a un objeto que haga algo por nosotros. De hecho, un método es solo un nombre elegante para una función adjunta a un objeto, por lo que también es una abstracción. Ahora, aquí están las buenas noticias sobre este método. ¡Todo lo que aprendiste sobre los selectores en el capítulo anterior sobre CSS se puede usar para decirle a este método lo que quieres que encuentre! ``'main`` es un parámetro para el método querySelector, y podría contener cualquier selector que aprendimos en el capítulo anterior.
 
-In fact ``document.head`` and ``document.body`` are the only tags that we can access directly.  All other tags must be accessed using ``querySelector``
+De hecho, ``document.head`` y ``document.body`` son las únicas etiquetas a las que podemos acceder directamente. Se debe acceder a todas las demás etiquetas usando ``querySelector``
 
-Lets take a breather here and try a few things:
+Tomemos un respiro aquí y pruebe algunas cosas:
 
-1.  Go back and modify the first example so that You can change the color of the h1.
-1.  Change the HTML so that main has an id of ``"a"``.  Also add a second ``main`` tag that contains an h1.  The initial view of your page should not change.  What happens when you click the button?
-2.   Now change the parameter to the querySelector method so that it finds main by its ID rather than by its tag?  What happens if you remove the id attribute from the first main and move it to the second?
+1. Regrese y modifique el primer ejemplo para que pueda cambiar el color del h1.
+1. Cambie el HTML para que main tenga una identificación de ``"a"``. También agregue una segunda etiqueta ``main`` que contenga un h1. La vista inicial de su página no debe cambiar. ¿Qué sucede cuando haces clic en el botón?
+2. Ahora cambie el parámetro al método querySelector para que encuentre main por su ID en lugar de por su etiqueta. ¿Qué sucede si elimina el atributo id del primer main y lo mueve al segundo?
