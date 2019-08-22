@@ -7,7 +7,7 @@ from os import environ
 from runestone import get_master_url
 
 ######## CHANGE THIS ##########
-project_name = "webfundamentals"
+project_name = "webfundamentals-es"
 ###############################
 
 # if you want to override the master url do it here.  Otherwise setting it to None
@@ -18,9 +18,9 @@ master_url = None
 if master_url is None:
     master_url = get_master_url()
 
-dynamic_pages = True
+dynamic_pages = False
 master_app = 'runestone'
-serving_dir = './build/webfundamentals'
+serving_dir = './build/webfundamentals-es'
 
 if dynamic_pages:
     dest = './published'
@@ -46,7 +46,7 @@ options(
             'dynamic_pages': dynamic_pages,
             'python3': 'true',
             'dburl': 'postgresql://bmiller@localhost/runestone',
-            'basecourse': 'webfundamentals',
+            'basecourse': 'webfundamentals-es',
             'downloads_enabled': 'false',
             'enable_chatcodes': 'false',
             'allow_pairs': 'false'
