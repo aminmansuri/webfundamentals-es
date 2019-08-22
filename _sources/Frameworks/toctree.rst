@@ -10,3 +10,4 @@ Modern Web Frameworks
    wsgi.rst
    templates.rst   
    database.rst
+   wtforms.rst
