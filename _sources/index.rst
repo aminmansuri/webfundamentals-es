@@ -30,6 +30,7 @@ Fundamentals of Web Programming
     AdvancedJavascript/toctree.rst
     CGI/toctree.rst
     Frameworks/toctree.rst
+    BasicNetworking/toctree.rst
 
 .. raw:: html
 
