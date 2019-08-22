@@ -1,8 +1,8 @@
-Javascript Exercises
-====================
+Ejercicios Javascript
+======================
 
 
-1. Make a simple web page that contains an h2 with the word "Hello"  a text input box, and a button.  When the user types a word or phrase into the input box and presses the button, replace the old h2 with the word entered.  Using animation, make the word spin.
+1. Haga una página web simple que contenga un h2 con la palabra "Hello", un cuadro de entrada de texto y un botón. Cuando el usuario escribe una palabra o frase en el cuadro de entrada y presiona el botón, reemplace el antiguo h2 con la palabra ingresada. Usando animación, haz girar la palabra.
 
   .. actex:: ex_js_4
      :language: html
@@ -16,7 +16,7 @@ Javascript Exercises
      </html>
 
 
-2. Make a simple web page that contains a button and a paragraph with the id of ``count`` Whenever this button is pressed increment the count by 1 and update the paragraph text.  Also update the font size so that as the number gets larger, so does the font.
+2. Cree una página web simple que contenga un botón y un párrafo con la identificación de ``count``. Cuando se presione este botón, incremente el recuento en 1 y actualice el texto del párrafo. También actualice el tamaño de la fuente para que a medida que el número se agrande, también lo haga la fuente.
 
   .. actex:: ex_js_1
      :language: html
@@ -28,7 +28,7 @@ Javascript Exercises
      </html>
 
 
-3. Repeat the previous exercise but make a list of numbers.  In this case you will not be able to simply update the innerHTML of the paragraph, you will need to use the ``document.createElement()`` and ``document.appendChild()`` functions to add a new list item.
+3. Repita el ejercicio anterior pero haga una lista de números. En este caso, no podrá actualizar simplemente el innerHTML del párrafo, deberá usar las funciones ``document.createElement()`` y ``document.appendChild()`` para agregar un nuevo elemento de lista.
 
   .. actex:: ex_js_2
     :language: html
@@ -40,7 +40,7 @@ Javascript Exercises
     </html>
 
 
-4. Given the following html.  Every time the button is pressed you should add a row to the table, where the new row of the table contains the sum of the previous two rows.  You should make use  of the lastChild, previousSibling, and innerText attributes in this exercise.
+4. Dado el siguiente html. Cada vez que se presiona el botón, debe agregar una fila a la tabla, donde la nueva fila de la tabla contiene la suma de las dos filas anteriores. Debe hacer uso de los atributos lastChild, previousSibling e innerText en este ejercicio.
 
   .. actex:: ex_js_3
      :language: html
@@ -53,12 +53,12 @@ Javascript Exercises
      </html>
      
 
-5. Create an html page with two text input boxes and four buttons.  The buttons should be labeled ``+``, ``-``, ``*``, and ``/``.  When one
-   of these buttons is pressed you should get the `value` from both text input boxes and add, subtract, multiply, or divide the
-   numbers entered in the text input boxes.  The result should be displayed below the buttons.  **Note** In order to do math
-   on the values you read from the text input boxes you will need to use ``Number.parseInt`` on the value.  for example
-   suppose you get a reference to input box 1 using ``myIn1 = document.querySelector("#in1id");`` then the statement ``value1 = Number.parseInt(myIn1.value)`` converts the string from the text input box to an integer.  In fact
-   most of the time Javascript will do the conversion for you automatically except for addition.
+5. Cree una página html con dos cuadros de entrada de texto y cuatro botones. Los botones deben etiquetarse como ``+``, ``-``, ``*``, y ``/``. Cuando uno
+   presiona estos botones, debe obtener el `valor` de ambos cuadros de entrada de texto y sumar, restar, multiplicar o dividir los
+   números ingresados en los cuadros de entrada de texto. El resultado debe mostrarse debajo de los botones. **Nota** Para hacer matemáticas
+   en los valores que lee de los cuadros de entrada de texto, deberá usar ``Number.parseInt`` en el valor. Por ejemplo
+   supongamos que obtiene una referencia al cuadro de entrada 1 usando ``myIn1 = document.querySelector("#in1id");`` entonces la instrucción ``value1 = Number.parseInt(myIn1.value)`` convierte la cadena de la entrada de texto caja a un entero. De hecho
+   la mayoría de las veces, Javascript realizará la conversión automáticamente, excepto por la adición.
 
   .. actex:: ex_js_5
     :language: html
@@ -70,8 +70,8 @@ Javascript Exercises
     </html>
 
 
-6.  Starting with the code given, create a page that looks like the following image:  The rest of the page must be created
-    using javascript.  You must use ``document.createElement`` and the ``appendChild`` functions.
+6.  Comenzando con el código proporcionado, cree una página similar a la siguiente imagen: El resto de la página debe crearse.
+    usando javascript. Debe usar ``document.createElement`` y las funciones ``appendChild``.
 
     .. image:: Figures/cePage.png
        :width: 350px

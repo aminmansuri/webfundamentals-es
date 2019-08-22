@@ -1,13 +1,13 @@
-Helper Objects
-==============
+Objetos auxiliares
+==================
 
-Array
------
+Arreglo
+-------
 
-An Array is used to hold a collection of elements. For example, if we wanted to work with all of the ``li`` elements in a list, we would keep track of them all by keeping them in an Array.  An array allows us to work with each element in turn because each element in the array can be accessed by its number.
+Una matriz se utiliza para contener una colección de elementos. Por ejemplo, si quisiéramos trabajar con todos los elementos ``li`` en una lista, haríamos un seguimiento de todos manteniéndolos en una matriz. Una matriz nos permite trabajar con cada elemento a su vez porque se puede acceder a cada elemento de la matriz por su número.
 
 
-Consider the following list.
+Considere la siguiente lista.
 
 .. raw:: html
 
@@ -20,9 +20,9 @@ Consider the following list.
    </ul>
 
 
-The first thing in our list is Luther its position in the list is 0.  The second thing on the list is Coe, its position is 1, the last thing on the list (appropriately) is  Wartburg its position is 4.
+Lo primero en nuestra lista es Luther, su posición en la lista es 0. Lo segundo en la lista es Coe, su posición es 1, lo último en la lista (apropiadamente) es Wartburg, su posición es 4.
 
-We can get the elements from the list and put them in an array using the ``querySelectorAll`` funciton.
+Podemos obtener los elementos de la lista y ponerlos en una matriz usando la función ``querySelectorAll``.
 
 
 .. activecode:: helper_array_1
@@ -45,7 +45,7 @@ We can get the elements from the list and put them in an array using the ``query
    </html>
 
 
-We can combine iteration and arrays to work with each element in an array as follows:
+Podemos combinar iteración y matrices para trabajar con cada elemento en una matriz de la siguiente manera:
 
 .. activecode:: helper_array_2
    :language: html

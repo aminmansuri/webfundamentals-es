@@ -1,10 +1,10 @@
-HTML Elements for Interaction
-=============================
+Elementos HTML para interacción
+===============================
 
-Building interactive web pages requires a variety of elements that allow your application to interact with the user.  The HTML5 standard provides us with many different elements from which we can construct an application.
+La creación de páginas web interactivas requiere una variedad de elementos que permiten que su aplicación interactúe con el usuario. El estándar HTML5 nos proporciona muchos elementos diferentes a partir de los cuales podemos construir una aplicación.
 
 
-Button
+Botón
 ------
 
 .. code-block:: html
@@ -18,10 +18,10 @@ Button
    </div>
 
 
-The Input Tag
--------------
+La etiqueta de entrada
+----------------------
 
-Many of the elements used in constructing a user interface use the ``input`` tag.  All of the ``input`` elements have a common set of attributes, the most important is the ``type`` attribute as that is what determines how the input element will look.
+Muchos de los elementos utilizados en la construcción de una interfaz de usuario usan la etiqueta ``input``. Todos los elementos de ``input`` tienen un conjunto común de atributos, el más importante es el atributo de ``type``, ya que eso es lo que determina cómo se verá el elemento de entrada.
 
 * type
 * name
@@ -29,8 +29,8 @@ Many of the elements used in constructing a user interface use the ``input`` tag
 * value
 
 
-Text Input
-----------
+Entrada de texto
+----------------
 
 .. code-block:: html
 
@@ -43,8 +43,8 @@ Text Input
    </div>
 
 
-Password
---------
+Contraseña
+----------
 
 .. code-block:: html
 
@@ -58,8 +58,8 @@ Password
 
 
 
-Checkbox
---------
+Caja
+-----
 
 .. code-block:: html
 
@@ -96,7 +96,7 @@ Radio
 Color
 -----
 
-Depending on the browser you are using this will either look like a generic text box or it will appear as a colored block which when you click on it will bring up a color picker.
+Dependiendo del navegador que esté utilizando, esto se verá como un cuadro de texto genérico o aparecerá como un bloque de color que al hacer clic en él aparecerá un selector de color.
 
 .. code-block:: html
 
@@ -108,7 +108,7 @@ Depending on the browser you are using this will either look like a generic text
    <input type="color">
    </div>
 
-Range
+Rango
 -----
 
 .. code-block:: html
@@ -121,8 +121,8 @@ Range
    <input type="range" min=0 max=255 value=125>
    </div>
 
-Date Stuff
-----------
+Cosas de fecha
+--------------
 
 * month
 * datetime-local
@@ -130,8 +130,8 @@ Date Stuff
 * time
 
 
-Drop Down Menus
----------------
+Menús desplegables
+------------------
 
 .. code-block:: html
 

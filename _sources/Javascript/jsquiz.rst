@@ -1,7 +1,7 @@
-Javascript Quiz
-===============
+Prueba de Javascript
+====================
 
-For the following question, you may use the textbook or your notes.  You may not google other references.  You have 30 minutes to complete this and you may test it as many times as you need to.
+Para la siguiente pregunta, puede usar el libro de texto o sus notas. No puede googlear otras referencias. Tiene 30 minutos para completar esto y puede probarlo tantas veces como sea necesario.
 
 .. qnum::
    :prefix: Q-
@@ -17,13 +17,13 @@ For the following question, you may use the textbook or your notes.  You may not
       :answer_c: document.body
       :answer_d: document.body.style
       :correct: c,d
-      :feedback_a: What if there are more than one h1?
-      :feedback_b: No, at a minimum the h1 would be inside the body
-      :feedback_c: Yes
-      :feedback_d: Correct
+      :feedback_a: ¿Qué pasa si hay más de un h1?
+      :feedback_b: No, como mínimo, el h1 estaría dentro del cuerpo
+      :feedback_c: Sí
+      :feedback_d: correcto
 
 
-      Which of the following are legal?
+      ¿Cuál de los siguientes es legal?
 
 
    .. mchoice:: q3_3
@@ -32,13 +32,13 @@ For the following question, you may use the textbook or your notes.  You may not
       :answer_c: castle
       :answer_d: dungeon
       :correct: b
-      :feedback_a: Not far enough
-      :feedback_b: Good Job
-      :feedback_c: Not quite, check the order of the ids
-      :feedback_d: No, check the ids carefully
+      :feedback_a: No lo suficientemente lejos
+      :feedback_b: Buen trabajo
+      :feedback_c: No del todo, verifique el orden de los identificadores
+      :feedback_d: No, revise los identificadores cuidadosamente
 
 
-      Given the following Javascript snippet, what will the alert box say?
+      Dado el siguiente fragmento de Javascript, ¿qué dirá el cuadro de alerta?
 
           .. code-block:: html
 
@@ -56,23 +56,22 @@ For the following question, you may use the textbook or your notes.  You may not
               </html>
 
    .. mchoice:: q3_4
-      :answer_a: a string
-      :answer_b: the string wizard
-      :answer_c: an HTML li element in the tree
-      :answer_d: a CSS rule
+      :answer_a: un string
+      :answer_b: el string wizard
+      :answer_c: un elemento HTML li en el árbol
+      :answer_d: una regla CSS
       :correct: c
-      :feedback_a: No, the innerText attribute is a string
-      :feedback_b: No, the innerText attribute would be the string wizard
-      :feedback_c: Good job
-      :feedback_d: Nope, this has nothing to do with CSS yet.
+      :feedback_a: No, el atributo innerText es una cadena
+      :feedback_b: No, el atributo innerText sería el asistente de cadena
+      :feedback_c: Buen trabajo
+      :feedback_d: No, esto no tiene nada que ver con CSS todavía.
 
-
-      Referring to the code in the previous question, what kind of thing is ``myLi`` referring to?
+      Refiriéndose al código en la pregunta anterior, ¿a qué tipo de cosas se refiere ``myLi``?
 
 
 .. reveal:: jquiz1prog
 
-   1.  Given the following HTML Add a button with a callback function that changes the ``h1`` from "Hello World" to "So Long CS130"  When you change the message you should also arrange it so the color of the text turns blue.  The rest of your page should remain unchanged.
+   1.  Dado el siguiente HTML, agregue un botón con una función de devolución de llamada que cambie el ``h1`` de "Hello World" a "So Long CS130". Cuando cambie el mensaje, también debe organizarlo para que el color del texto se vuelva azul. El resto de su página debe permanecer sin cambios.
 
    .. actex:: jsquiz_1
       :language: html

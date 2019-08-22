@@ -1,9 +1,9 @@
-Creating Elements on the Fly
-============================
+Crear elementos sobre la marcha
+================================
 
-The pattern in the previous example is a common one in web development.  You create a template using HTML and then you modify the template in response to events, gaining access to those elements using the ``querySelector`` method.
+El patrón en el ejemplo anterior es común en el desarrollo web. Crea una plantilla usando HTML y luego modifica la plantilla en respuesta a eventos, obteniendo acceso a esos elementos usando el método ``querySelector``.
 
-Modifying a template only gets us so far.   In many other cases you want to add content to your page dynamically.  For example, Lets make a simple time application that records the date and time whenever you press the button.  
+Modificar una plantilla solo nos lleva muy lejos. En muchos otros casos, desea agregar contenido a su página de forma dinámica. Por ejemplo, hagamos una aplicación de tiempo simple que registre la fecha y la hora cada vez que presione el botón.
 
 .. activecode:: create_1
    :language: html
@@ -27,28 +27,28 @@ Modifying a template only gets us so far.   In many other cases you want to add 
       </body>
    </html>
 
-Although its not a very useful application, it illustrates how we can create HTML elements in response to events.  Figure 1 shows the  DOM tree before the button is clicked.
+Aunque no es una aplicación muy útil, ilustra cómo podemos crear elementos HTML en respuesta a eventos. La Figura 1 muestra el árbol DOM antes de hacer clic en el botón.
 
 .. figure:: Figures/tree1.svg
 
-   Figure 1, DOM tree before click
+   Figura 1, árbol DOM antes de hacer click
 
-**Creating an Element**  The ``document.createElement`` function can be used to create any HTML element.  You can create an h1, a table, a paragraph, an input, even a button.  Once created, the new element is not yet part of our document tree. That is why we need to assign this newly created element a name.  In the example above, we create a ``tr`` and call it trow and a ``td`` which we name td.  We can assign values to any of the attributes of the element at this point.
+**Creación de un elemento** La función ``document.createElement`` se puede usar para crear cualquier elemento HTML. Puede crear un h1, una tabla, un párrafo, una entrada, incluso un botón. Una vez creado, el nuevo elemento aún no forma parte de nuestro árbol de documentos. Es por eso que necesitamos asignar un nombre a este elemento recién creado. En el ejemplo anterior, creamos un ``tr`` y lo llamamos trow y un ``td`` al que llamamos td. Podemos asignar valores a cualquiera de los atributos del elemento en este momento.
 
-**Creating Text**  We also used the function ``document.createTextNode`` to create the text we are going to put in the table.  We could have also used ``td.innerHTML`` to accomplish the same thing, but creating a ``textNode`` is another way to do the job.
+**Creación de texto** También utilizamos la función ``document.createTextNode`` para crear el texto que vamos a poner en la tabla. También podríamos haber usado ``td.innerHTML`` para lograr lo mismo, pero crear un ``textNode`` es otra forma de hacer el trabajo.
 
-**Adding to the Tree**  Now that we have our new pieces for our page we need to put things back together.  the ``appendChild`` function allows us to add to the tree by adding children one at a time.  Figure 2 shows the new DOM tree, and shows the order in which the nodes are connected together.
+**Agregar al árbol** Ahora que tenemos nuestras nuevas piezas para nuestra página, necesitamos volver a armar las cosas. La función ``appendChild`` nos permite agregar al árbol agregando hijos uno a la vez. La Figura 2 muestra el nuevo árbol DOM y muestra el orden en que los nodos están conectados entre sí.
 
 .. figure:: Figures/tree2.svg
 
-   Figure 2, DOM tree after click
+   Figura 2, árbol DOM después de hacer click
 
 
-Which Button?
--------------
+Que botón?
+----------
 
-Consider the following code.  We have two buttons, we would like the attach the same function to
-both buttons, but when we click we would also like our function to know which button was clicked.
+Considere el siguiente código. Tenemos dos botones, nos gustaría adjuntar la misma función a
+ambos botones, pero cuando hacemos clic también nos gustaría que nuestra función sepa en qué botón se hizo clic.
 
 
 .. activecode:: button_context_1
@@ -66,21 +66,21 @@ both buttons, but when we click we would also like our function to know which bu
       </body>
    </html>
 
-How can we modify the example so that it knows which button was clicked?  We can use a parameter.
+¿Cómo podemos modificar el ejemplo para que sepa en qué botón se hizo clic? Podemos usar un parámetro.
 
-What is ``this``?
+¿Qué es ``this``?
 ~~~~~~~~~~~~~~~~~
 
-The parameter we can use in our example above is ``this``, which is a much used variable name in Javascript,
-but also quite confusing.  You can think of ``this`` as a self-reference.  This answers the "who am I?" question
-for an object.  From HTML we can pass this as a parameter to an onclick function, and because the onclick
-is part of the tag ``this`` refers to the tag.   Important Note:  In most cases we have said that the
-name of a variable does not matter;  ``this`` is the exception to that rule!
+El parámetro que podemos usar en nuestro ejemplo anterior es ``this``, que es un nombre de variable muy usado en Javascript,
+pero también bastante confuso Puedes pensar en ``this`` como una referencia propia. Esto responde a "¿quién soy yo?" pregunta
+para un objeto. Desde HTML podemos pasar esto como un parámetro a una función onclick, y porque el onclick
+es parte de la etiqueta ``this`` se refiere a la etiqueta. Nota importante: en la mayoría de los casos hemos dicho que el
+el nombre de una variable no importa; ¡``this`` es la excepción a esa regla!
 
-Modify the example above so that in each case you are calling ``hello(this)``.  Now in your javascript change
-the alert to ``alert("Hello I am " + me.innerHTML)``
+Modifique el ejemplo anterior para que en cada caso llame a ``hello(this)``. Ahora en tu cambio de javascript
+la alerta a ``alert("Hello I am " + me.innerHTML)``
 
-For comparison, lets create the same page as above but in Javascript.
+A modo de comparación, creemos la misma página que la anterior pero en Javascript.
 
 .. activecode:: button_context_2
    :language: html
@@ -105,13 +105,13 @@ For comparison, lets create the same page as above but in Javascript.
       </body>
    </html>
 
-When we are creating elements in Javascript our task is a bit easier.  Because the ``this`` variable
-is automatically set for us inside the function based on the object it is attached to.
+Cuando estamos creando elementos en Javascript, nuestra tarea es un poco más fácil. Porque la variable ``this``
+se configura automáticamente para nosotros dentro de la función en función del objeto al que está adjunto.
 
-Attaching Events
+Adjuntar eventos
 ----------------
 
-What if we want to attach an event to one of the objects we have created?  what if we want to use one function but attach it to many different elements, and have our function do something different depending on which element is clicked on?  This is the final topic for this section.  Its a tricky one, so pay close attention.  Lets start by attaching an onclick handler to each row of the table.
+¿Qué sucede si queremos adjuntar un evento a uno de los objetos que hemos creado? ¿Qué sucede si queremos usar una función pero adjuntarla a muchos elementos diferentes y hacer que nuestra función haga algo diferente según el elemento en el que se haga clic? Este es el tema final de esta sección. Es complicado, así que presta mucha atención. Comencemos adjuntando un controlador onclick a cada fila de la tabla.
 
 .. activecode:: create_2
    :language: html
@@ -140,13 +140,13 @@ What if we want to attach an event to one of the objects we have created?  what 
    </html>
 
 
-This example has a new function called clickon, right now, all it does is pop up an alert dialog box that says Hello whenever you click on a row of the table.  The line that attaches this function to the row is ``td.onclick = clickon;``  That is not a typo that line is correct.  clickon is just a name for a function so we can use that name to assign to other attributes.  It is only when the parenthesis are put after the name that we call the function.
+Este ejemplo tiene una nueva función llamada clickon, en este momento, todo lo que hace es abrir un cuadro de diálogo de alerta que dice Hello cada vez que hace clic en una fila de la tabla. La línea que une esta función a la fila es ``td.onclick = clickon;`` Eso no es un error tipográfico, esa línea es correcta.  clickon es solo un nombre para una función, por lo que podemos usar ese nombre para asignar a otros atributos. Es solo cuando los paréntesis se ponen después del nombre que llamamos a la función.
 
-.. admonition:: Key Point
+.. admonition:: Punto clave
 
-   When an event handler is called, it's called within the context of the element that was clicked on. So, the identifier ``this`` will refer to the DOM element that you clicked on. You can then access attributes of the element using ``this`` as the identifier.  For example ``this.className`` will give the class of the element you click on.
-   
-Using the key point from above we can change our clickme function as follows:
+  Cuando se llama a un controlador de eventos, se llama dentro del contexto del elemento en el que se hizo clic. Entonces, el identificador ``this`` se referirá al elemento DOM en el que hizo clic. Luego puede acceder a los atributos del elemento utilizando ``this`` como identificador. Por ejemplo, ``this.className`` le dará la clase del elemento en el que hace clic.
+
+Usando el punto clave desde arriba, podemos cambiar nuestra función de clic de la siguiente manera:
 
 .. code-block:: javascript
 
@@ -156,4 +156,4 @@ Using the key point from above we can change our clickme function as follows:
        alert("my parent is a " + this.parentNode.tagName)
    }  
    
-Modify the code in the example to match the above and then run it.  Notice that when you click on different rows of the table, you get different messages in the alert dialog box.  Notice that it also knows where it lives in the DOM tree, and can get its parent or even its siblings.
+Modifique el código en el ejemplo para que coincida con el anterior y luego ejecútelo. Tenga en cuenta que cuando hace clic en diferentes filas de la tabla, obtiene diferentes mensajes en el cuadro de diálogo de alerta. Tenga en cuenta que también sabe dónde vive en el árbol DOM y puede obtener su padre o incluso sus hermanos.

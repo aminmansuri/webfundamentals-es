@@ -1,13 +1,13 @@
-The Javascript Programming Language
-===================================
+El lenguaje de programación Javascript
+======================================
 
-We have made excellent progress toward learning about Web Programming.  You have learned something about two of the three primary web programming languages.  We will continue to explore HTML and CSS in more detail, but it is now time to turn our attention to Javascript.
+Hemos hecho un excelente progreso para aprender sobre programación web. Has aprendido algo sobre dos de los tres lenguajes de programación web principales. Continuaremos explorando HTML y CSS con más detalle, pero ahora es el momento de centrar nuestra atención en Javascript.
 
-Although we have been calling HTML and CSS programming languages, they do not have nearly the power of Javascript.  Once you learn Javascript you could can write any program that could be written.
+Aunque hemos estado llamando a los lenguajes de programación HTML y CSS, no tienen casi el poder de Javascript. Una vez que aprenda Javascript, puede escribir cualquier programa que se pueda escribir.
 
-Javascript is a procedural language.  With HTML and especially CSS the order of things is not always important, but with Javascript, the order that you do things in is very important.  Javascript is also called an **object oriented** language.  That means that we will be working with objects in our imaginary world of the browser.  Objects can tell us things we want to know, and objects know how to do many things.  We only need to write a javascript program to ask or tell.
+Javascript es un lenguaje de procedimiento. Con HTML y especialmente CSS, el orden de las cosas no siempre es importante, pero con Javascript, el orden en el que haces las cosas es muy importante. Javascript también se llama lenguaje **orientado a objetos**. Eso significa que trabajaremos con objetos en nuestro mundo imaginario del navegador. Los objetos pueden decirnos cosas que queremos saber, y los objetos saben cómo hacer muchas cosas. Solo necesitamos escribir un programa javascript para preguntar o contar.
 
-But, lets not get caught up in a bunch of formal talk about computer science and programming language theory, lets start with a simple example of one of the things that Javascript is good at doing, namely making buttons do interesting things.  For our first program lets make a button that changes the background color of our window.
+Pero, no nos dejemos atrapar por un montón de charlas formales sobre ciencias de la computación y teoría del lenguaje de programación, comencemos con un ejemplo simple de una de las cosas en las que Javascript es bueno, es decir, hacer que los botones hagan cosas interesantes. Para nuestro primer programa, hagamos un botón que cambie el color de fondo de nuestra ventana.
 
 .. activecode:: js_first
    :language: html
@@ -25,51 +25,51 @@ But, lets not get caught up in a bunch of formal talk about computer science and
       </body>
    </html>
    
-Now that example may look very complex to you, and in fact it does demonstrate **LOTS** of important aspects of programming.  But do not worry, we'll dissect this example carefully so that you fully understand what is going on.
+Ahora ese ejemplo puede parecerle muy complejo, y de hecho demuestra **MUCHOS** aspectos importantes de la programación. Pero no se preocupe, analizaremos este ejemplo cuidadosamente para que comprenda completamente lo que está sucediendo.
 
-Here are some questions that we should answer about the example above:
+Aquí hay algunas preguntas que deberíamos responder sobre el ejemplo anterior:
 
-#. Button?  We haven't talked about a ``button`` tag before, whats the deal with that?
-#. What is the ``onclick`` attribute for?
-#. script tag?  Again this is a new one why a ``script`` tag?
-#. What in the world does all of that stuff inside the script tag mean?
-#. What happened to my button!?!
+#. ¿Button? No hemos hablado antes de una etiqueta de ``button``, ¿cuál es el problema con eso?
+#. ¿Para qué sirve el atributo ``onclick``?
+#. Etiqueta de script? Nuevamente, esta es una nueva ¿por qué una etiqueta ``script``?
+#. ¿Qué significa todo eso dentro de la etiqueta del script?
+#. ¿Qué le pasó a mi botón!?
 
-Those are all very good questions, I'm glad you asked.  Lets take them one at a time right now, and then we'll expand upon the ideas in the next few sections.
+Esas son todas muy buenas preguntas, me alegra que hayas preguntado. Tomemos uno a la vez en este momento, y luego ampliaremos las ideas en las próximas secciones.
 
-The button tag is part of HTML that is going to allow us to make interactive websites.  In addition to buttons there are other things like check boxes, and text input, that we will talk about in the next section.  For now we will use the button as a simple example, of something we are all used to using every day.
+La etiqueta del botón es parte del HTML que nos permitirá crear sitios web interactivos. Además de los botones, hay otras cosas como casillas de verificación y entrada de texto, de las que hablaremos en la siguiente sección. Por ahora usaremos el botón como un ejemplo simple, de algo que todos estamos acostumbrados a usar todos los días.
 
-The ``onclick`` attribute is the way we answer the question, "what should this button do when someone clicks on it."  The answer in this case is may lead to confusion, but hopefully you at least get the idea that when the button is clicked we want to "change this page".  The way we are going to do this is through a **function call**. You have used functions in math class many times, and these are not all that different.  The important thing to remember is that functions are **abstractions** of things that need doing.  We all use abstractions all the time in our everyday life.  
+El atributo ``onclick`` es la forma en que respondemos a la pregunta, "¿qué debe hacer este botón cuando alguien hace clic en él". La respuesta en este caso puede llevar a confusión, pero esperamos que al menos tenga la idea de que cuando se hace clic en el botón queremos "cambiar esta página". La forma en que haremos esto es a través de una **llamada de función**. Has usado funciones en la clase de matemáticas muchas veces, y estas no son tan diferentes. Lo importante para recordar es que las funciones son **abstracciones** de cosas que deben hacerse. Todos usamos abstracciones todo el tiempo en nuestra vida cotidiana.
 
-For example, you may tell your friend, "I'm going to Computer Science now." this is an abstraction of the following hypothetical steps:
+Por ejemplo, puede decirle a su amigo: "Voy a la informática ahora". Esta es una abstracción de los siguientes pasos hipotéticos:
 
-#.  Get out of bed.
-#.  Get dressed
-#.  Walk out of your room, down the hall and wait for the elevator.
-#.  Take the elevator to the fourth floor.
-#.  Walk out of the elevator, out of the door, and across campus to Olin hall.
-#.  Go in the door, and up the stairs to second floor, enter room 202 and find your favorite place to sit.
+#. Levantarse de la cama.
+#. Vestirse
+#. Sal de tu habitación, baja por el pasillo y espera el ascensor.
+#. Toma el ascensor hasta el cuarto piso.
+#. Salga del elevador, salga por la puerta y cruce el campus hacia el salón Olin.
+#. Entra por la puerta y sube las escaleras hasta el segundo piso, entra en la habitación 202 y encuentra tu lugar favorito para sentarte.
 
-That would be a long boring conversation if you responded with all 6 of those steps every time a friend asked you what you were doing. But your friend understands those steps are necessary when you say you are going to class.   Further more even step 1 is an abstraction of several smaller steps:  Sit up, remove the covers, slide my legs over the side of the bed, stand up (or climb down the ladder).  
+Sería una conversación larga y aburrida si respondieras con los 6 pasos cada vez que un amigo te preguntara qué estabas haciendo. Pero tu amigo entiende que esos pasos son necesarios cuando dices que vas a clase. Más aún, incluso el paso 1 es una abstracción de varios pasos más pequeños: sentarme, quitar las sábanas, deslizar mis piernas por el costado de la cama, levantarme (o bajar por la escalera).
 
-This brings us to the next question, the ``script`` tag is one way that we can include Javascript in our HTML.  But like CSS we will see that we can, and should, also include Javascript by putting it in its own file and including it.  More on that later.
+Esto nos lleva a la siguiente pregunta, la etiqueta ``script`` es una forma en que podemos incluir Javascript en nuestro HTML. Pero al igual que CSS, veremos que podemos y debemos también incluir Javascript al ponerlo en su propio archivo e incluirlo. Más sobre eso más tarde.
 
-The stuff inside the script tag is Javascript code. This code contains a **function definition** which is how we create our very own abstractions. Unlike your friend to naturally understands what it means to go to class, computers are very dumb, and very literal, they only do what you tell them.  In this case there are two steps to our abstraction.  One changes the background color of the body, and the second one changes our message.  These lines are also abstractions of a very complicated set of steps that we as programmers don't need to know the details of right now.  We just need to know which abstractions the browser understands.
+Lo que hay dentro de la etiqueta del script es el código Javascript. Este código contiene una **definición de función**, que es cómo creamos nuestras propias abstracciones. A diferencia de tu amigo que entiende naturalmente lo que significa ir a clase, las computadoras son muy tontas y muy literales, solo hacen lo que tú les dices. En este caso hay dos pasos para nuestra abstracción. Uno cambia el color de fondo del cuerpo, y el segundo cambia nuestro mensaje. Estas líneas también son abstracciones de un conjunto de pasos muy complicado del que nosotros, como programadores, no necesitamos conocer los detalles en este momento. Solo necesitamos saber qué abstracciones comprende el navegador.
 
-Lets defer the question of what happened to the button for just a bit.  In the meantime experiment with the Javascript code by trying the following things:
+Vamos a diferir la pregunta de qué pasó con el botón por un momento. Mientras tanto, experimente con el código Javascript probando lo siguiente:
 
-#. Make the background light green
-#. Experiment with different style elements we have learned about through CSS.  See if you can add a line that makes the text red.  
-#. Can you change the fontSize to 48pt?
-#. What does that tell you about ``document.body.style``?
-#. Change the wording inside the ``<h1>`` tag in the Javascript.
-#. What happens if you add ``<button>Click Me</button>`` after the closing ``</h1>``?
+#. Haz el fondo verde claro
+#. Experimente con diferentes elementos de estilo que hemos aprendido a través de CSS. Vea si puede agregar una línea que haga que el texto sea rojo.
+#. ¿Se puede cambiar el tamaño de fuente a 48pt?
+#. ¿Qué te dice eso sobre ``document.body.style``?
+#. Cambie la redacción dentro de la etiqueta ``<h1>`` en el Javascript.
+#. ¿Qué sucede si agrega ``<button>Click Me</button>`` después del cierre ``</h1>``?
 
 
-Lets look at a little different example that accomplishes the same thing, but illustrates how CSS, Javascript, and HTML all work together.
-In this example rather than setting the color of the background directly, we will make the body have the class attribute "myclass" when the button is clicked.
+Veamos un pequeño ejemplo diferente que logra lo mismo, pero ilustra cómo CSS, Javascript y HTML funcionan juntos.
+En este ejemplo, en lugar de establecer el color del fondo directamente, haremos que el cuerpo tenga el atributo de clase "myclass" cuando se haga clic en el botón.
 
-Now, 
+Ahora,
 
 .. activecode:: js_second
    :language: html

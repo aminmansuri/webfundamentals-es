@@ -1,12 +1,12 @@
-Iteration
+Iteración
 =========
 
 
-Iteration allows us to do things many times, or to process a **collection** of elements.  We'll look at collections shortly, for now let us just focus on the
-basics of iteration.
+La iteración nos permite hacer cosas muchas veces, o procesar una **colección** de elementos. Examinaremos las colecciones en breve, por ahora, centrémonos en
+conceptos básicos de iteración.
 
 
-Now this is not very exciting, but suppose we want to build a table that has a row for each number from 0 through 9.  
+Ahora, esto no es muy emocionante, pero supongamos que queremos construir una tabla que tenga una fila para cada número del 0 al 9.
 
 
 .. activecode:: js_iter1
@@ -17,15 +17,15 @@ Now this is not very exciting, but suppose we want to build a table that has a r
    }
    
 
-Now that was pretty simple, but it illustrates a very important aspect of programming.  The key aspects of the example are:
+Ahora eso fue bastante simple, pero ilustra un aspecto muy importante de la programación. Los aspectos clave del ejemplo son:
 
-1.  The for statement,  is the statement that allows us to do things many times.
-2.  The number of times we do something is controlled by the three statements:
-    1. ``i = 0`` this is our starting value
-    2. ``i < 10`` this is our stopping condition.  We will keep doing whatever is inside the for statement until ``i < 10`` is no longer true.
-    3.  ``i++`` this is really important as it changes the value of i and allows us to make progress towards the end.  Without this third component, i would never increase and we would do whatever is inside the loop forever.  This is called an **infinite loop**.
-    
-Now let us look at how we can use the loop to add 10 rows to a table.
+1. La declaración for, es la declaración que nos permite hacer cosas muchas veces.
+2. El número de veces que hacemos algo está controlado por las tres declaraciones:
+    1. ``i = 0`` este es nuestro valor inicial
+    2. ``i < 10`` esta es nuestra condición de parada. Seguiremos haciendo lo que esté dentro de la declaración for hasta que ``i < 10`` ya no sea cierto.
+    3.  ``i++`` esto es realmente importante ya que cambia el valor de i y nos permite avanzar hacia el final. Sin este tercer componente, nunca aumentaría y haríamos lo que sea que esté dentro del ciclo para siempre. Esto se llama un **bucle infinito**.
+
+Ahora veamos cómo podemos usar el ciclo para agregar 10 filas a una tabla.
 
 
 .. activecode:: js_iter2
