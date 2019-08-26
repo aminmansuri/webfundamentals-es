@@ -44,8 +44,8 @@ Aunque no es una aplicación muy útil, ilustra cómo podemos crear elementos HT
    Figura 2, árbol DOM después de hacer click
 
 
-Que botón?
-----------
+¿Qué botón?
+------------
 
 Considere el siguiente código. Tenemos dos botones, nos gustaría adjuntar la misma función a
 ambos botones, pero cuando hacemos clic también nos gustaría que nuestra función sepa en qué botón se hizo clic.

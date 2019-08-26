@@ -1,5 +1,5 @@
-CSS Exercises
-=============
+Ejercicios
+============
 
 
 1. Agregue una regla CSS y html apropiado para aplicar estilo a cualquier otra línea de la lista desordenada con un color de fondo azul claro. Especifique el color de fondo utilizando el método rgb.

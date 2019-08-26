@@ -1,10 +1,10 @@
-Selection
+Selección
 =========
 
-Selection allows us to ask questions, and take different actions depending on the answers.  We use selection every day as we go about our duties.  If its cold out we put on some extra clothes.  If its raining we grab our umbrella before we leave the house.  These are examples of the kinds of decisions we make.  More formally we can put this into an ``if`` statement.  ``if`` it is raining, ``then`` we take our umbrella.
+La selección nos permite hacer preguntas y tomar diferentes acciones dependiendo de las respuestas. Usamos la selección todos los días a medida que avanzamos en nuestras tareas. Si hace frío, nos ponemos algo de ropa extra. Si está lloviendo, agarramos nuestro paraguas antes de salir de la casa. Estos son ejemplos de los tipos de decisiones que tomamos. Más formalmente podemos poner esto en una declaración de ``if``. ``si`` está lloviendo, ``entonces`` tomamos nuestro paraguas.
 
-Javascript allows us to ask questions like this  using an ``if`` statement as well.  An if statement is often used in Javascript to check an input value from
-a text box to make sure that it is a good value.  For example if colors can only be in the range from 0 to 255 we could check the value of an input box as follows:
+Javascript nos permite hacer preguntas como esta usando una declaración ``if`` también. Una declaración if se usa a menudo en Javascript para verificar un valor de entrada de
+un cuadro de texto para asegurarse de que sea un buen valor. Por ejemplo, si los colores solo pueden estar en el rango de 0 a 255, podríamos verificar el valor de un cuadro de entrada de la siguiente manera:
 
 
 .. activecode:: select_1
@@ -29,20 +29,20 @@ a text box to make sure that it is a good value.  For example if colors can only
    </html>
 
 
-In this example we have one function that can check the values for any of our color text input boxes.  Once again we have the interesting issue of how does the checkme function know which text box it is supposed to check?  When we are setting up a call from html we can pass ``this`` as a special parameter that refers to the object that the onchange is connected to.
+En este ejemplo, tenemos una función que puede verificar los valores de cualquiera de nuestros cuadros de entrada de texto en color. Una vez más tenemos el interesante tema de cómo la función checkme sabe qué cuadro de texto se supone que debe verificar. Cuando estamos configurando una llamada desde html, podemos pasar ``this`` como un parámetro especial que se refiere al objeto al que está conectado el onchange.
 
 
-If  you want to get a little practice, add another if statement to ``checkme`` that ensures the value entered by the user is greater than or equal to zero.
+Si desea practicar un poco, agregue otra instrucción if a ``checkme`` que garantice que el valor ingresado por el usuario sea mayor o igual a cero.
 
 
-Guessing Game
-=============
+Juego de adivinanzas
+=====================
 
-Here is a simple application that uses selection to allow you play the old guessing game.
+Aquí hay una aplicación simple que usa la selección para permitirte jugar al viejo juego de adivinanzas.
 
-The computer will select a number between 1 and 100.  You can type in your guess into the box and the computer will tell you when you are right, or if your guess is too high or too low.
+La computadora seleccionará un número entre 1 y 100. Puede escribir su suposición en el cuadro y la computadora le dirá cuándo tiene razón, o si su suposición es demasiado alta o demasiado baja.
 
-To select our number we will use another of Javascripts builting facilities to make up a random number.  This is called ``Math.random()``  It generates a random number between 0 and 1, so we'll have to do a little bit of work to turn that into a random number between 1 and 100.
+Para seleccionar nuestro número, utilizaremos otro método de Javascripts para crear un número aleatorio. Esto se llama ``Math.random()`` Genera un número aleatorio entre 0 y 1, por lo que tendremos que hacer un poco de trabajo para convertirlo en un número aleatorio entre 1 y 100.
 
 
 .. activecode:: select_2
@@ -72,10 +72,9 @@ To select our number we will use another of Javascripts builting facilities to m
    </body>
    </html>
    
-Things to do:
+Cosas para hacer:
 
-* Change this to not use an alert.  Update the innerHTML of a paragraph to tell the user if they are too high or too low.
-* Add a dynamically created list to keep track of the guesses, color the guesses that are too high red, and the guesses that are too low blow.
-* Keep track of the number of guesses and tell the user at the end how many guesses they needed.
-* To play a new game, you must now reload the page.  Can you add a reset button that makes up a new number and clears out everything else?
-
+* Cambie esto para no usar una alerta. Actualice el innerHTML de un párrafo para decirle al usuario si es demasiado alto o demasiado bajo.
+* Agregue una lista creada dinámicamente para realizar un seguimiento de las conjeturas, colorear las conjeturas que son demasiado altas en rojo y las conjeturas que son demasiado bajas.
+* Mantenga un registro del número de conjeturas y diga al usuario al final cuántas conjeturas necesitaban.
+* Para jugar un juego nuevo, ahora debes volver a cargar la página. ¿Puedes agregar un botón de reinicio que forme un nuevo número y borre todo lo demás?

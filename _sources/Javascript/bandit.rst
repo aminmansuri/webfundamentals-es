@@ -1,5 +1,5 @@
-Máquina tragamonedas Javascript Project
-----------------------------------------
+Máquina tragamonedas - Proyecto Javascript
+--------------------------------------------
 
 .. image:: Figures/cherry.png
    :width: 100px
