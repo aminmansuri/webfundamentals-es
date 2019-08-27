@@ -14,7 +14,7 @@ Como cualquier documento, los documentos HTML pueden tener varias capas de encab
    <h3>Level three</h3>
 
 
-Ahora modifica el ejemplo anterior para agregar los siguientes tres niveles de encabezados. ¿Que notaste? ¿Qué sucede si agrega un título de nivel 7? ¿Qué sucede si cierra una etiqueta h2 con un h1 o un h3?
+Ahora modifica el ejemplo anterior para agregar los siguientes tres niveles de encabezados. ¿Qué notaste? ¿Qué sucede si agrega un título de nivel 7? ¿Qué sucede si cierra una etiqueta h2 con un h1 o un h3?
 
 .. reveal:: reveal_heading
 
@@ -22,7 +22,7 @@ Ahora modifica el ejemplo anterior para agregar los siguientes tres niveles de e
 
 
 
-Otro aspecto de la etiqueta de encabezado es que es lo que llamamos una etiqueta **block**. Observe que cada encabezado aparece en su propia línea. Eso es más o menos lo que esperaríamos para un encabezado. Pero no necesariamente para otras etiquetas. En breve, veremos algunas etiquetas **en línea** que no aparecen en su propia línea.
+Otro aspecto de la etiqueta de encabezado es que es lo que llamamos una etiqueta **block**. Observe que cada encabezado aparece en su propia línea. Eso es más o menos lo que esperaríamos para un encabezado. Pero no necesariamente para otras etiquetas. En breve, veremos algunas etiquetas **inline** que no aparecen en su propia línea.
 
 
 Los párrafos
@@ -45,7 +45,7 @@ Los párrafos son otro elemento fundamental de los documentos. Los párrafos tam
 Imágenes
 ----------
 
-Las imágenes son otro elemento común de un documento o una página web. Para incluir una imagen en un documento, debe usar una etiqueta ``img``. Las etiquetas de imagen son un ejemplo de un elemento **en línea** porque simplemente fluyen con el texto circundante. No obligan a crear un nuevo bloque en la representación del html. Aquí hay un par de imágenes:
+Las imágenes son otro elemento común de un documento o una página web. Para incluir una imagen en un documento, debe usar una etiqueta ``img``. Las etiquetas de imagen son un ejemplo de un elemento **inline** porque simplemente fluyen con el texto circundante. No obligan a crear un nuevo bloque en la representación del html. Aquí hay un par de imágenes:
 
 .. figure:: Figures/LutherBellPic.jpg
 
@@ -62,28 +62,28 @@ La etiqueta de imagen tiene un nuevo componente llamado atributo. En general, la
    :language: html
 
    <h1>Imágenes incrustadas</h1>
-   <p>Las imágenes son elementos en línea que encajan en el flujo
+   <p>Las imágenes son elementos inline que encajan en el flujo
    <img src="http://interactivepython.org/runestone/static/webfundamentals/_images/LutherBellPic.jpg">
    de un párrafo sin causar saltos de línea adicionales.</p>
 
 
 Intenta modificar el ejemplo anterior para que incluya el logotipo nórdico en lugar de la campana.
-También puedes cambiar el alto y el ancho de una imagen utilizando un atributo ``height=`` o un atributo ``width=``. Intenta cambiar el tamaño de la imagen en el ejemplo anterior. Observa lo que le hace al flujo. Intenta cambiar solo uno de alto o ancho y luego intenta cambiar ambos al mismo tiempo. Puedes estirar tu imagen, hacer de todo tipo de locuras.
+También puedes cambiar el alto y el ancho de una imagen utilizando un atributo ``height=`` o un atributo ``width=``. Intenta cambiar el tamaño de la imagen en el ejemplo anterior. Observa lo que le hace al flujo. Intenta cambiar solo uno de alto o ancho y luego intenta cambiar ambos al mismo tiempo. Puedes estirar tu imagen o hacer de todo tipo de locuras.
 
-También hay varios otros atributos de la etiqueta de imagen. Puede leer sobre ellos `here <http://www.w3schools.com/tags/tag_img.asp>`_.
+También hay varios otros atributos de la etiqueta de imagen. Puede leer sobre ellos `aquí <http://www.w3schools.com/tags/tag_img.asp>`_.
 
 
 Links
 -----
 
-El último enlace básico para cubrir en esta sección es la etiqueta de enlace ``a``. De hecho, la última oración de la sección anterior utilizaba un enlace para enviarlo al sitio web de w3schools para obtener más información sobre los atributos de una etiqueta ``img``. Los enlaces son lo que hizo que la web fuera tan popular en primer lugar. Hoy los llamamos enlaces, pero en años anteriores generalmente se los denominaba hipervínculos. Puede proporcionar un enlace a cualquier URL en la web utilizando el atributo ``href`` en la etiqueta ``a``. El texto en el que hará clic va entre la etiqueta de apertura ``a`` y la etiqueta de cierre ``a``.
+El último enlace básico para cubrir en esta sección es la etiqueta de enlace ``a``. De hecho, la última oración de la sección anterior utilizaba un enlace para enviarlo al sitio web de w3schools para obtener más información sobre los atributos de una etiqueta ``img``. Los enlaces son lo que hicieron a la web tan popular en primer lugar. Hoy los llamamos enlaces, pero en años anteriores generalmente se los denominaba hipervínculos. Puede proporcionar un enlace a cualquier URL en la web utilizando el atributo ``href`` en la etiqueta ``a``. El texto en el que hará clic va entre la etiqueta de apertura ``a`` y la etiqueta de cierre ``a``.
 
 
 .. activecode:: html_link
    :language: html
 
    <h1>Los enlaces hacen la web!</h1>
-   <p>Los enlaces son otro elemento en línea. Puedes leer sobre enlaces y sus atributos
+   <p>Los enlaces son otro elemento inline. Puedes leer sobre enlaces y sus atributos
    <a href="http://www.w3schools.com/tags/tag_a.asp">aquí</a> en el sitio web de w3schools</p>
 
 
@@ -108,7 +108,7 @@ Hacer texto en negrita o cursiva y otros formatos también es fácil en HTML. El
    <p><b>Este texto está en negrita</b></p>
    <p><strong>Este texto es fuerte</strong></p>
    <p><i>Este texto está en cursiva</i></p>
-   <p><em>Este texto es enfatizado</em></p>
+   <p><em>Este texto está enfatizado</em></p>
    <p><code>Esta es la salida de la computadora</code></p>
    <p>Este es<sub> subíndice</sub> y <sup>superíndice</sup></p>
    <p>Esto <br /> fuerza <br /> un <br /> salto de línea </p>
@@ -138,9 +138,9 @@ Puedes mezclar y combinar estos estilos en todo tipo de formas. Intenta hacer un
 
 
 .. clickablearea:: inlineelem
-   :question: Haga clic en la etiqueta de inicio para todos los elementos en línea en el ejemplo.
+   :question: Haga clic en la etiqueta de inicio para todos los elementos inline en el ejemplo.
    :iscode:
-   :feedback: Los elementos en línea no comienzan en una nueva línea y solo toman el ancho que sea necesario.
+   :feedback: Los elementos inline no comienzan en una nueva línea y solo toman el ancho que sea necesario.
 
     &lt;html&gt;
     &lt;body&gt;

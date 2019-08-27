@@ -9,8 +9,8 @@ Listas desordenadas
    :language: html
 
    <ul>
-   <li>This is an unordered list</li>
-   <li>The <code>li</code> tags come between two <code>ul</code> tags
+   <li>Esta es una lista desordenada</li>
+   <li> <code>li</code> tags come between two <code>ul</code> tags
    </ul>
 
 
@@ -58,7 +58,7 @@ Las listas pueden estar dentro de otras listas. También. Esto es muy cierto par
 
    <ol>
    <li>Esta es una lista ordenada</li>
-   <li>Las etiquetas <code>li</code> se encuentran entre dos <code>ol</code>etiquetas
+   <li>Las etiquetas <code>li</code> se encuentran entre dos etiquetas <code>ol</code>
    <li>Observe que las etiquetas <code>li</code> se usan para ambos.
    <ul>
    <li>Esta es una lista desordenada</li>
@@ -121,15 +121,15 @@ Aquí hay un ejemplo completo que ilustra el uso de las siguientes etiquetas esp
 Hay muchos atributos que puede usar con las diversas etiquetas de tabla.
 
 * ``table``
-  * width - puede especificar un ancho como porcentaje o como número de píxeles. Este atributo es útil en este momento, pero no se recomienda su uso, ya que es mejor usar CSS para controlar el aspecto de su tabla. Decimos que este atributo está **en desuso**
-  * border - puede agregar bordes a sus tablas como en el ejemplo anterior, pero esta etiqueta también está en desuso.
-  * El espacio entre las celdas de la tabla. También en desuso.
+    * width - puede especificar un ancho como porcentaje o como número de píxeles. Este atributo es útil en este momento, pero no se recomienda su uso, ya que es mejor usar CSS para controlar el aspecto de su tabla. Decimos que este atributo está **en desuso**
+    * border - puede agregar bordes a sus tablas como en el ejemplo anterior, pero esta etiqueta también está en desuso.
+    * El espacio entre las celdas de la tabla. También en desuso.
 
 * ``td``
-  * colspan  -- si tiene una tabla en particular donde necesita una columna extra ancha en algunas filas, puede hacer que una celda de su tabla abarque más de una columna usando el atributo colspan. Su valor es el número de columnas.
+    * colspan  -- si tiene una tabla en particular donde necesita una columna extra ancha en algunas filas, puede hacer que una celda de su tabla abarque más de una columna usando el atributo colspan. Su valor es el número de columnas.
 
 * ``tr``
-  * rowspan -- si tiene una tabla en particular donde necesita una columna para abarcar varias filas, puede hacer que una celda de su tabla abarque más de una fila utilizando el atributo rowspan. Su valor es el número de filas.
+    * rowspan -- si tiene una tabla en particular donde necesita una columna para abarcar varias filas, puede hacer que una celda de su tabla abarque más de una fila utilizando el atributo rowspan. Su valor es el número de filas.
 
 
 Experimenta con table. ¿Qué tipo de etiquetas puedes incluir dentro de cada ``td``? ¿Puedes hacer una table de otro table?
@@ -174,4 +174,4 @@ El atributo ``controls`` proporciona botones de inicio/parada/avance rápido/reb
 IFrames
 -------
 
-IFrames le permite incrustar una página web dentro de otra página web. Los ejemplos de código activo en este libro usan un iframe para permitirle experimentar con el html, creando una página dentro de una página.
+IFrames le permite incrustar una página web dentro de otra página web. Los ejemplos de active code en este libro usan un iframe para permitirle experimentar con el html, creando una página dentro de una página.

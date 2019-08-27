@@ -27,7 +27,7 @@ El marcado de restructutedText para el contenido de este capítulo hasta ahora s
    El marcado de restructutedText para el contenido de este capítulo hasta ahora se ve así:
    
 
-Las anotaciones en el restructuredText son bastante discretas, y en realidad se suman a la legibilidad del texto plano en la mayoría de los casos. Por ejemplo, el ``===`` debajo del título de este capítulo indica que es, de hecho, un título o título. Los párrafos regulares no requieren anotaciones adicionales. Para hacer algo audaz, lo rodeas de dos asteriscos. Si desea hacer una lista de viñetas, simplemente comience la línea con un asterisco.
+Las anotaciones en el restructuredText son bastante discretas, y en realidad se suman a la legibilidad del texto plano en la mayoría de los casos. Por ejemplo, el ``===`` debajo del título de este capítulo indica que es, de hecho, un título o encabezado. Los párrafos regulares no requieren anotaciones adicionales. Para hacer algo audaz, lo rodeas de dos asteriscos. Si desea hacer una lista de viñetas, simplemente comience la línea con un asterisco.
 
 La mayoría de los documentos tienen un conjunto de elementos razonablemente limitado que incluye lo siguiente:
 
@@ -83,7 +83,7 @@ Antes de continuar para hablar más sobre etiquetas HTML específicas, es útil 
 
    Figura 2. Una vista de árbol de la página html
 
-Este árbol está al revés con la forma en que generalmente pensamos en un árbol, pero en informática colocamos la "raíz" del árbol en la parte superior. Entonces, la raíz de este árbol es la etiqueta html. La etiqueta html tiene dos **hijos**, la cabeza y el cuerpo. La cabeza tiene un hijo, que es la etiqueta de la cabeza. La etiqueta html es el **padre** de la etiqueta principal. El cuerpo tiene tres hijos, la etiqueta h1 y dos etiquetas p. También puede resultarle útil pensar en esto como un esquema, aunque tendría que girar la imagen 90 grados en sentido antihorario para obtener la orientación en forma de esquema. Veremos cómo esta estructura de árbol de una página html es útil más adelante cuando comencemos a usar CSS y Javascript.
+Este árbol está invertido con respecto a la forma en que generalmente pensamos en un árbol, pero en informática colocamos la "raíz" del árbol en la parte superior. Entonces, la raíz de este árbol es la etiqueta html. La etiqueta html tiene dos **hijos**, la cabeza y el cuerpo. La cabeza tiene un hijo, que es la etiqueta del título. La etiqueta html es el **padre** de la etiqueta principal. El cuerpo tiene tres hijos, la etiqueta h1 y dos etiquetas p. También puede resultarle útil pensar en esto como un esquema, aunque tendría que girar la imagen 90 grados en sentido antihorario para obtener la orientación en forma de esquema. Veremos cómo esta estructura de árbol de una página html es útil más adelante cuando comencemos a usar CSS y Javascript.
 
 
 

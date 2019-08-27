@@ -9,13 +9,13 @@ Ejercicios
    :language: html
    :nocodelens:
 
-2.  Puedes copiar la URL de casi cualquier imagen en un navegador haciendo clic derecho sobre la imagen y eligiendo "copiar URL de imagen" o algo similar. Escriba una página html en la ventana de código activo para este ejercicio que incluya un elemento de encabezado que dé un título a alguna imagen que encuentre, luego incluya la imagen en la página, con el tamaño apropiado, y un párrafo que describa la imagen.
+2.  Puedes copiar la URL de casi cualquier imagen en un navegador haciendo clic derecho sobre la imagen y eligiendo "copiar URL de imagen" o algo similar. Escriba una página html en la ventana de active code para este ejercicio que incluya un elemento de encabezado que dé un título a alguna imagen que encuentre, luego incluya la imagen en la página, con el tamaño apropiado, y un párrafo que describa la imagen.
 
 .. actex:: ex_html_2
    :language: html
    :nocodelens:
 
-3.  Haz un esquema que tenga números romanos en mayúscula en el nivel más alto del esquema y números romanos en minúscula para los elementos de segundo nivel. Enumerantres conceptos nuevos que hemos cubierto en esta clase en el primer nivel, y para cada uno de ellos enumera dos o tres puntos clave.
+3.  Haz un esquema que tenga números romanos en mayúscula en el nivel más alto del esquema y números romanos en minúscula para los elementos de segundo nivel. Enumera tres conceptos nuevos que hemos cubierto en esta clase en el primer nivel, y para cada uno de ellos enumera dos o tres puntos clave.
 
 .. actex:: ex_html_3
    :language: html
@@ -33,7 +33,7 @@ Ejercicios
 
   .. image:: Figures/challengetable.png
 
-  Sugerencia, esto va a requerir tanto en filas como en columnas. Además, no intentes hacer todo esto de una vez. Comienza con el encabezado, luego continúa con el resto de la tabla, trabajando en partes pequeñas
+Sugerencia, esto va a requerir tanto en filas como en columnas. Además, no intentes hacer todo esto de una vez. Comienza con el encabezado, luego continúa con el resto de la tabla, trabajando en partes pequeñas
 
 .. actex:: ex_html_5
    :language: html

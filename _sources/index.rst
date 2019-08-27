@@ -1,9 +1,9 @@
 .. This work is licensed as a Creative Commons Attribution-ShareAlike 4.0 International work.
 .. Bradley Miller, 2014, Luther College
 
-===============================
-Fundamentals of Web Programming
-===============================
+====================================
+Fundamentos de la Programación Web
+====================================
 
 .. Here is were you specify the content and order of your new book.
 
