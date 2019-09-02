@@ -1,5 +1,5 @@
-Basic Networking
-:::::::::::::::::
+Redes Básicas
+::::::::::::::
 
 .. toctree::
    :maxdepth: 2

@@ -1,16 +1,16 @@
-Sockets: The Building Blocks of Network Programming
-===================================================
+Sockets: los componentes básicos de la programación de redes
+================================================================
 
 
-How is it that two programs each running on their own computer can communicate with each other?  This is, of course, what happens many times a day when your browser shows you a web page.  Your browser is a program, and it must communicate with a web server in order to get the HTML, CSS, images, and Javascript that make up a web page.  The details of how this simple communication happens can take an entire semester in a Networking course.  We are going to tackle just the top layer of this problem looking at the application layer of the Networking stack.
+¿Cómo es que dos programas que se ejecutan en su propia computadora pueden comunicarse entre sí? Esto es, por supuesto, lo que sucede muchas veces al día cuando su navegador le muestra una página web. Su navegador es un programa y debe comunicarse con un servidor web para obtener HTML, CSS, imágenes y Javascript que conforman una página web. Los detalles de cómo ocurre esta comunicación simple pueden tomar un semestre completo en un curso de Networking. Vamos a abordar solo la capa superior de este problema mirando la capa de aplicación de la pila de Redes.
 
-The building block of the application layer is the socket.  Sockets provide for easy two way communication between two programs running on two different computers (or hosts).  A socket is uniquely identified by four values:
+El bloque de construcción de la capa de aplicación es el socket. Los sockets proporcionan una comunicación bidireccional fácil entre dos programas que se ejecutan en dos computadoras (o hosts) diferentes. Un socket se identifica de forma exclusiva por cuatro valores:
 
-* source ip address
-* source port
-* destination ip address
-* destination port
+* Dirección IP origen
+* Puerto de origen
+* Dirección IP de destino
+* Puerto de destino
 
-These values need some definition.  First, what do we mean by an IP address?  You already know that the computers on the internet have nice memorable names like www.google.com or knuth.luther.edu.  Each name can be translated into a unique IP numerical IP address, such as 192.203.196.71, only 1 machine on the internet can have the IP address of 192.203.196.71  (however, that address can be known by multiple names).   The numerical addresses are necessary for the machinery of the internet to do the work of getting a message from one machine to the other.
+Estos valores necesitan alguna definición. Primero, ¿qué queremos decir con una dirección IP? Usted ya sabe que las computadoras en Internet tienen buenos nombres memorables como www.google.com o knuth.luther.edu. Cada nombre se puede traducir a una dirección IP numérica IP única, como 192.203.196.71, solo 1 máquina en Internet puede tener la dirección IP  192.203.196.71  (sin embargo, esa dirección puede ser conocida por varios nombres). Las direcciones numéricas son necesarias para que la maquinaria de Internet haga el trabajo de enviar un mensaje de una máquina a otra.
 
-The port number is important because one computer may have many programs running each corresponding to a different network service.  For example the web server runs on port 80 while the mail server runs on port 25 and the ssh server runs on port 22.  So the port identifies which program on the computer the socket is connected to.  On your laptop, the situation is similar, you may have a web browser connected to many different web servers in differnt tabs, you have a mail client connected to a mail server, and you probably have an message client connected to a chat server, etc.
+El número de puerto es importante porque una computadora puede tener muchos programas ejecutándose, cada uno correspondiente a un servicio de red diferente. Por ejemplo, el servidor web se ejecuta en el puerto 80 mientras que el servidor de correo se ejecuta en el puerto 25 y el servidor ssh se ejecuta en el puerto 22. Por lo tanto, el puerto identifica a qué programa de la computadora está conectado el socket. En su computadora portátil, la situación es similar, puede tener un navegador web conectado a muchos servidores web diferentes en diferentes pestañas, tiene un cliente de correo conectado a un servidor de correo y probablemente tenga un cliente de mensaje conectado a un servidor de chat, etc.
