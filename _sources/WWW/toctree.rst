@@ -1,4 +1,4 @@
-The World Wide Web
+La World Wide Web
 ::::::::::::::::::
 
 .. toctree::

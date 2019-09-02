@@ -1,38 +1,38 @@
 .. This work is licensed under a Creative Commons Attribution 4.0 License
    Brad Miller, Luther College
 
-The Technology of the Web
+La tecnología de la Web
 =========================
 
-We now return to the question of how a page gets from the server to your browser.   Lets use the idea of a URI as our starting point for this section.  In fact lets start by addressing a very common point of confusion  What is a URI and what is URL, you probably more commonly think of URL's.
+Ahora volvemos a la pregunta de cómo una página llega del servidor a su navegador. Usemos la idea de un URI como nuestro punto de partida para esta sección. De hecho, comencemos abordando un punto de confusión muy común. Qué es un URI y qué es una URL, probablemente piense más comúnmente en las URL.
 
-* URL - Uniform Resource Locator
-* URI - Uniform Resource Identifier
+* URL - Localizador uniforme de recursos
+* URI - Identificador uniforme de recursos
 
-All locators are also identifiers, so all URLs are URI's. Think about it this way, Bradley Miller is an identifier, it identifies me, but does not tell you how to locate me or how to contact me. 321 Olin Hall, Luther College, Decorah IA, is a locator and an identifier for a specific place in the world.  On the web URL's have three main pieces, lets look at one and identify the parts:
+Todos los localizadores también son identificadores, por lo que todas las URL son URI. Piénselo de esta manera, Bradley Miller es un identificador, me identifica, pero no le dice cómo localizarme o cómo contactarme. 321 Olin Hall, Luther College, Decorah IA, es un localizador e identificador de un lugar específico en el mundo. En la URL de la web tenemos tres piezas principales, veamos una e identifiquemos las partes:
 
 ::
 
     http://interactivepython.org/runestone/static/webfundamentals/index.html
 
-This is a common URL with three parts:
+Esta es una URL común con tres partes:
 
-* ``http``  This part identifies the protocol that will be used for communication.  It seems a bit redundant when we are always thinking about the web, but in fact there are several common protocols that are used in URL's including ``https`` for secure http communication, ``mailto`` to indicate that we are going to use a mail protocol, ``ftp`` the file transfer protocol.
+* ``http`` Esta parte identifica el protocolo que se utilizará para la comunicación. Parece un poco redundante cuando siempre estamos pensando en la web, pero de hecho hay varios protocolos comunes que se usan en las URL, incluidos ``https`` para una comunicación http segura, ``mailto`` para indicar que vamos a usar un protocolo de correo, ``ftp``, el protocolo de transferencia de archivos.
 
-* ``interactivepython.org`` This is the name of a host on the web.  Host names must be unique, there is only one interactivepython.org on the entire internet.  If you dig more deeply you can find out that this name translates to a numeric address.  If you have ever tried to configure your home router, or looked at the settings on your computer or phone you have undoubtedly come across these numeric addresses before.  In the case of interactivepython.org the numeric address is 108.168.242.153.  This numerica address is also unique in all of the internet, and  identifies a specific server running in a server room in Dallas TX.
+* ``interactivepython.org`` Este es el nombre de un host en la web. Los nombres de host deben ser únicos, solo hay un interactivepython.org en todo Internet. Si profundiza más, puede descubrir que este nombre se traduce en una dirección numérica. Si alguna vez ha intentado configurar su enrutador doméstico, o ha mirado la configuración en su computadora o teléfono, indudablemente se ha encontrado con estas direcciones numéricas antes. En el caso de interactivepython.org la dirección numérica es 108.168.242.153. Esta dirección numérica también es única en todo Internet e identifica un servidor específico que se ejecuta en una sala de servidores en Dallas TX.
 
-* ``runestone/static/webfundamentals/index.html`` identifies a particular file on the server.  The server has a runestone folder, and inside that folder is another folder called static, which contains another folder called webfundamentals which finally contains a file called index.html.  This is no different than how you probably organize your own files on your own computer.
+* ``runestone/static/webfundamentals/index.html`` identifica un archivo en particular en el servidor. El servidor tiene una carpeta runestone, y dentro de esa carpeta hay otra carpeta llamada static, que contiene otra carpeta llamada webfundamentals que finalmente contiene un archivo llamado index.html. Esto no es diferente de cómo probablemente organice sus propios archivos en su propia computadora.
 
-This URL contains **a lot** of information.  When you type this into the address bar of your browser you have given your browser enough information to get the specific page you wanted.  A diagram will help with the next part of this discussion.
+Esta URL contiene **mucha** información. Cuando escribe esto en la barra de direcciones de su navegador, le ha brindado suficiente información para obtener la página específica que desea. Un diagrama ayudará con la siguiente parte de esta discusión.
 
 .. image:: Figures/SimpleRequest.png
 
-Lets suppose we continue with the URL above.  You, the user, type in the URL to your browser, The browser knows that the host name is the part that comes after the first two slashes, but before the next slash.  So it is able to extract that part of the URL.  Using patterns like this occurs frequently in Computer Science.  The name is then passed on to another server called the Domain Name Service (DNS) in the diagram above.  The DNS is actually very large and complex network of servers, but we'll just take it for granted that it works and gives us back the IP address correctly.  With the address in hand, the browser establishes a connection to the server through a mechansim known as a **socket**.  This socket allows the browser and the server to reliably communicate over the internet.
+Supongamos que continuamos con la URL anterior. Usted, el usuario, ingrese la URL de su navegador. El navegador sabe que el nombre de host es la parte que viene después de las dos primeras barras, pero antes de la siguiente barra. Entonces puede extraer esa parte de la URL. El uso de patrones como este ocurre con frecuencia en informática. El nombre se pasa a otro servidor llamado Servicio de nombres de dominio (DNS) en el diagrama anterior. El DNS es en realidad una red de servidores muy grande y compleja, pero daremos por sentado que funciona y nos devuelve la dirección IP correctamente. Con la dirección en mano, el navegador establece una conexión con el servidor a través de un mechansim conocido como **socket**. Este socket permite que el navegador y el servidor se comuniquen de manera confiable a través de Internet.
 
-An HTTP Request
----------------
+Una solicitud HTTP
+-------------------
 
-With the connection established the browser sends the following message::
+Con la conexión establecida, el navegador envía el siguiente mensaje:
 
      GET runestone/static/webfundamentals/index.html HTTP/1.1
      Host: myname.luther.edu
@@ -40,22 +40,22 @@ With the connection established the browser sends the following message::
      Accept-Language: en
      _
 
-The format of this message is defined by HTTP.  Remember a protocol is a well defined set of rules for how one program communicates with another.  Let us break down this message into its component parts.
+El formato de este mensaje está definido por HTTP. Recuerde que un protocolo es un conjunto bien definido de reglas sobre cómo un programa se comunica con otro. Desglosemos este mensaje en sus partes componentes.
 
-* ``GET``  -- HTTP defines several commands, but the most common are GET and POST.  As you might imagine, GET is a request to retrieve some resource from the server.
-* ``runestone/static/webfundamentals/index.html``  This is the URI for the resource that we want to get.  Recall that this will correspond to a file on the disk drive of the server.
-* ``HTTP/1.1`` tells the server that the browser is "speaking" the 1.1 version of the HTTP protocol.
+* ``GET``  -- HTTP define varios comandos, pero los más comunes son GET y POST. Como puede imaginar, GET es una solicitud para recuperar algunos recursos del servidor.
+* ``runestone/static/webfundamentals/index.html`` Este es el URI para el recurso que queremos obtener. Recuerde que esto corresponderá a un archivo en la unidad de disco del servidor.
+* ``HTTP/1.1`` le dice al servidor que el navegador está "hablando" la versión 1.1 del protocolo HTTP.
 
-This is all of the information that can be contained on the first line of the message.  If there is anything else on the line it may confuse the server, or the server may just ignore it.  This line is called the **request line**.
+Esta es toda la información que puede estar contenida en la primera línea del mensaje. Si hay algo más en la línea, puede confundir al servidor, o el servidor puede simplemente ignorarlo. Esta línea se llama **línea de solicitud**.
 
-What follows the request line are a series of lines called the **headers**  There may be just one header or there may be many.  However, there can only be one header per line and they all follow the pattern of ``name : value``.  So the first line the name is ``host`` and the value is ``myname.luther.edu`` this lets the server know the name of the namchine that is contacting it.  The ``User-Agent`` header tells the server that the user is running version 6.0 of the mozilla browser.
+Lo que sigue a la línea de solicitud son una serie de líneas llamadas **encabezados** Puede haber solo un encabezado o puede haber muchos. Sin embargo, solo puede haber un encabezado por línea y todos siguen el patrón de ``nombre: valor``. Entonces, la primera línea, el nombre es ``host`` y el valor es ``myname.luther.edu``, esto le permite al servidor saber el nombre de la máquina que lo está contactando. El encabezado ``User-Agent`` le dice al servidor que el usuario está ejecutando la versión 6.0 del navegador mozilla.
 
-Finally the last line is blank.  The server knows that there are no more headers when it gets a blank line.
+Finalmente la última línea está en blanco. El servidor sabe que no hay más encabezados cuando aparece una línea en blanco.
 
-An HTTP Response
-----------------
+Una respuesta HTTP
+------------------
 
-The server extracts the URI from the request line and goes out to its disk to locate the file.  Assuming the file is there it will make the following response through the socket back to the browser::
+El servidor extrae el URI de la línea de solicitud y sale a su disco para localizar el archivo. Suponiendo que el archivo esté allí, hará la siguiente respuesta a través del socket al navegador::
 
     HTTP/1.1 200 OK
     Date: Tues, 2 Sept 2014 15:39:21
@@ -71,12 +71,12 @@ The server extracts the URI from the request line and goes out to its disk to lo
     </html>
 
 
-Just like the request, the format of the response is spelled out by the HTTP.  The first line again has three parts ``HTTP/1.1`` tells the browser that the server is following the HTTP 1.1 protocol.  the ``200`` is the response code that tells the browser that everything is fine and the OK is a descriptive message:  Some other common response lines are:
+Al igual que la solicitud, el formato de la respuesta se detalla mediante HTTP. La primera línea nuevamente tiene tres partes ``HTTP/1.1`` le dice al navegador que el servidor está siguiendo el protocolo HTTP 1.1. el ``200`` es el código de respuesta que le dice al navegador que todo está bien y que OK es un mensaje descriptivo: algunas otras líneas de respuesta comunes son:
 
-* HTTP/1.1 404 Not Found   -- you may have seen a 404 if you've every mistyped a URL
-* HTTP/1.1 500 Internal Server Error  -- The server itself has crashed for some reason
-* HTTP/1.1 302 Resource Moved
+* HTTP/1.1 404 Not Found   -- es posible que haya visto un 404 si ha escrito mal una URL
+* HTTP/1.1 500 Internal Server Error  -- el servidor se ha bloqueado por algún motivo
+* HTTP/1.1 302 Recurso movido
 
-Following the response line are the headers from the server.  Most of these are self explanator, but the ``Content-Type`` header is particularly important.  This tells the browser that what follows is going to be some HTML.  Another common ``Content-type`` is ``image/jpg`` this tells the browser that what comes next is going to be an image.  Note that each image in a page will require its own request / response from the browser to the server.
+Siguiendo la línea de respuesta están los encabezados del servidor. La mayoría de estos se explican por sí mismos, pero el encabezado ``Content-Type`` es particularmente importante. Esto le dice al navegador que lo que sigue será algo de HTML. Otro ``Content-type`` común es ``image/jpg``, esto le dice al navegador que lo que viene a continuación será una imagen. Tenga en cuenta que cada imagen en una página requerirá su propia solicitud/respuesta del navegador al servidor.
 
-Finally, notice the blank line followed by the contents of the web page itself expressed in HTML, which is the subject of the next chapter.
+Finalmente, observe la línea en blanco seguida de los contenidos de la página web expresada en HTML, que es el tema del próximo capítulo.
